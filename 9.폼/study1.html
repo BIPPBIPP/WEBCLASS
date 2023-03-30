@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼(양식)태그</title>
+</head>
+<body>
+    <h1>form</h1>
+    <p>홈페이지를 사용하는 사용자가 내용을 입력할 수 있도록 미리 제공하는 양식 태그</p>
+    <p>label태그는 이름표 태그로 사용하며 사용자가 입력하는 입력박스에 대한 이름을 달아줄 때 사용한다.</p>
+    <p>label태그와 input태그를 서로 연결하기 위해서는 input태그의 id값을 label태그와 for속성에 그대로 적용한다. - 홈페이지의 사용 편의를 위해 자주 사용하는 패턴</p>
+    <p>label태그가 디자인적으로 보이지 않더라고 실제로 html태그 label태그는 구성해야하며,css에서 안보이게 처리하는 방법으로 사용한다.</p>
+    <p> input type속성이 radio인 경우 select태그와 같이 제한된 내용을 입력하게 끔 유도할 때 사용하며, radio버튼의 name속성 값을 동일하게 하면 여러 개의 radio 버튼 중 1개만 선택되게 할 수 있다.</p>
+    <p>input type="text"태그의 겨우는 짧은 한 줄의 텍스트를 입력시킬 때 사용하며, textarea태그는 장문의 텍스트를 입력시킬 때 사용한다.</p>
+        
+    <hr>
+    <form action="#" method="get(공개)/post(비공개)">
+        <fieldset>
+            <legend>계정정보</legend>
+                <label for="user_id">아이디:</label>
+                <input type="text" id="user_id" placeholder="아이디를 입력하세요">
+                <br><br>
+                <label for="user_pw">비밀번호:</label>
+                <input type="password" id="user_pw" placeholder="비밀번호를 입력하세요">
+                <br><br>
+                <label for="user_repw">비밀번호 재확인:</label>
+                <input type="password" id="user_repw" placeholder="비밀번호를 재확인하세요">
+<br>
+                <laber> 개인정보 <legend>
+                <label for="user=name">이름:</label>
+                <input type="text" id="user_name" placeholder="이름을 입력하세요">
+                <br><br>
+                <label for="user_bath">생년월일:</label>
+                <input type="number" id="user_bath" placeholder="년도">
+                <select>
+                    <option>월</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <input type="number" placeholder="일">
+                <br>
+                <label for="user_gender">성별</label>
+                <input type="radio" id="woman" name="gender">
+                <label for="woman">여자</label>
+                <input type="radio" id="man" name="gender">
+                <label for="man">남자</label>
+                <input type="radio" id="no_select" name="gender">
+                <label for="no_select">선택안함</label>
+                <!---select id="user_gender">
+                    <option>성별</option>
+                    <option>남성</option>
+                    <option>여성</option>
+                    <option>선택 안함</option>
+                </select-->
+                <br>
+                <label >취미</label>
+                <input type="checkbox" id="sing">
+                <label for="like1">노래 부르기</label>
+                <input type="checkbox" id="watch">
+                <label for="like2">ott시청</label>
+                <input type="checkbox" id="caffee">
+                <label for="like3">카페가기</label>
+                <br>
+                <label for="interview">자기소개</label>
+                <textarea id="user_profile" placeholder="자기소개를 해주세요">장문의 자기소개 글</textarea>
+
+    </fieldset>
+<input type="submit" value="회원가입">
+<input type="reset" value="다시 작성">
+
+    
+</form>
+
+
+
+    
+</body>
+</html>
