@@ -1,0 +1,5 @@
+.container{color: green; font: 25px;}
+.container>h2{font: 40px;}
+.container p{color: blue;}
+.under{text-decoration: underline;}
+
