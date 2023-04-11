@@ -1,5 +1,8 @@
 h1{color: red;}
 
+h2#a{color: blue!important;}
+h2{color: red!important;}
+
 h2#a.title.title2{color: teal;}
 h2#a.title{color: tomato;}
 h2#a{color: aquamarine;}
