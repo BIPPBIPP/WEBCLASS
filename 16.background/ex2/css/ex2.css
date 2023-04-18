@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0;}
+@font-face {
+    font-family: Pulmouone;
+    src: url(../예제1/PulmuoneLOHASBold.woff);
+}
+body{
+    width: auto;
+    font-size: 20px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+.container>p{
+    margin-top: 35px;
+}
+
+#hello{
+    font-size: 22px;
+    /* font-family: Pulmouone; */
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#strong{
+    font-size: 22px;
+    /* font-family: Pulmouone; */
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+/* #thx{margin-bottom: 70px;} */
+
+#name{
+    font-size: 30px;
+    font-family: Pulmouone;
+    font-weight: bold;
+    /* background-image: url(../예제1/write_sign.gif) ;
+    background-repeat: no-repeat;
+    background-position: 50% 100%; */
+    background: url(../예제1/write_sign.gif) no-repeat 41% 100%;
+    background-size: auto 35px;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}

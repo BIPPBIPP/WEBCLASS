@@ -1,0 +1,74 @@
+/* common-style(상속스타일) */
+html{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@font-face {
+    font-family: "풀무원폰트";
+    src: url(../img/font/PulmuoneLOHASBold.woff);
+}
+
+/* layout */
+.banner{
+    height: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/* detail */
+.container>h2{
+    
+    font-size: 30px;
+    font-weight: bold;
+    background: url(../img/img/sub_tit_line.gif) repeat-x 0 50%;
+    margin-bottom: 50px;
+}
+
+.container>h2>span{
+    /* border: 1px solid red; */
+    background: white;
+    padding-right: 20px;
+}
+
+.container>h3{
+    font-size: 52px;
+    
+    font-family: "풀무원폰트";
+    text-align: center;
+    margin: 0 auto ;
+    padding: 0 70px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.container>h3>span{
+    color: #7eae4b;
+}
+
+.container section{
+    
+    background-color: #f4f4f4;
+    width: 810px;
+    box-sizing: 629px;
+    padding: 40px 90px 50px;
+    margin: 0 auto ;
+    text-align: center;
+}
+
+.container>section>h4{
+    font-family: "풀무원폰트";
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.container>section>p.p1{
+    margin-bottom: 30px;
+}
+
