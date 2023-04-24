@@ -1,0 +1,189 @@
+/* 1.rest */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul{list-style: none;}
+
+/* 2.common - style */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 3. layout - 크기, 배치 */
+
+.all{
+    width: 920px;
+    margin: 0 auto;
+    
+}
+footer{
+    background-color: #efefef;
+}
+footer>div{
+    width: 920px;
+    margin: 0 auto;
+}
+
+
+/* 4. detail (글씨크기, 글씨색, 배경색, 마진, 패딩 등) */
+
+
+/* header */
+header{
+    /* border: 1px solid gold; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header>.logo>h1{
+    /* border: 1px solid green; */
+}
+
+.lnb{
+    /* border:1px solid gold; */
+    display: flex; 
+    justify-content: flex-end;
+}
+.gnb{
+    /* border :1px solid gold; */
+    display: flex; 
+}
+
+
+.lnb>li{
+    /* border: 1px solid blue; */
+    border-right: 1px solid gray;
+    background-color: #333; 
+    color: #fff; 
+    font-size: 0.9rem;
+    padding: 2px 6px;
+}
+.lnb>li:first-of-type{padding-left: 16px;}
+.lnb>li:last-of-type{padding-right: 16px;}
+
+
+
+
+
+.gnb>li{
+    /* border: 1px solid blue; */
+    padding: 10px 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* main */
+.contents{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contents>section{
+    width: calc((100% - 40px)/3);
+
+}
+
+.contents>.left>h2{
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+}
+
+
+.contents>.mid>h2{
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .noticelist>li>a{
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.noticelist>li>a>span{
+    border: 1px solid black;
+    float
+} */
+
+.noticelist>li{
+    margin-bottom: 3px;
+}
+.noticelist>li:last-of-type{
+    margin-bottom: 0;
+}
+
+.noticelist>li>a{
+    display: block;   
+}
+
+.noticelist>li>a>span{
+    float: right
+}
+
+
+
+
+.contents>.right>h2{
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+}
+
+.contents>.right>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .right의 ul에 class="quickmenu"를 지어주고 
+.quickmenu{display:flex; flec-direction:row; 해주어도 됨.}
+*/
+
+.all{
+    margin-bottom: 40px;
+}
+
+
+/* footer */
+.innerFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fLeft{
+    align-self: center;
+}
+.fRight{
+    padding: 20px 20px;
+}
+.footMenu{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+
+}
+.footMenu>li{
+    margin-right: 20px;
+}
+.footMenu>li:last-of-type{margin: 0;}
+
+address{
+    margin-bottom: 5px;
+}

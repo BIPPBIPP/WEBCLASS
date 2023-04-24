@@ -1,0 +1,48 @@
+*{margin: 0; padding: 0;}
+
+
+.parent{
+    width: 700px;
+    /* height는 auto (지정해주지 않았기 때문) */
+    
+    background: pink;
+    margin: 0 auto;
+    border: 1px solid aqua;
+}
+.a{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    float: left;
+    
+}
+.b{
+    width: 200px;
+    height: 300px;
+    background-color: blue;
+    float: right;
+    
+}
+.c{
+    width: 200px;
+    height: 400px;
+    background-color: green;
+    float: right;
+    
+}
+.parent:after{
+    content: "";
+    display: block;
+    clear: both;
+    
+}
+/* .clear{
+    clear: both;
+    background-color: lime;
+    /* clear를 하게되면 float된 태그(레이어) 중 길이(높이)가 가장 긴 태그에 맞추어 그 바로 밑에 붙는다. 
+    + 부모태그의 높이(설정 하지 않았다면)도 이에 맞추어 자동으로 설정된다. */
+} */
+
+.nextP{
+    border: 1px solid gold;
+}

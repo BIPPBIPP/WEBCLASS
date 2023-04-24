@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0;}
+.box{
+    width: 600px;
+    height: 700px;
+    margin: 0 auto;
+    background: pink;
+    font-size: 5rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-start;
+    /* flex-wrap: wrap;
+    align-content: center; */
+    /* wrap이 활성화 되어있을 때(행이 2개 이상일 때) align-content 활용가능 */
+    
+    
+    
+}
+.box>div{
+    flex-basis: 100px;
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
+    flex: 1;
+    /* => flex-basis:0;
+        flex-grow: 1;
+        flex-shrink: 1; */
+}
+
+.box>div:last-of-type{margin-right: 0;}
+/* .box>div{float: left;}
+.box::after{content: ""; display: block;clear: both;} */
+.box .a{background: red; order: 0; 
+    /* flex-shrink: 2; */
+    /* flex-grow: 2; */
+    /* align-self: flex-end;*/
+}
+.b{background: blue; order: 2;}
+.c{background: green;order: 3;}
+.d{background: gold; order: 1;}

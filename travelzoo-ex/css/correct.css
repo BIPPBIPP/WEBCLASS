@@ -1,0 +1,130 @@
+/* 1.rest */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul{list-style: none;}
+
+
+/* 2.common - style */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 3. layout - 크기, 배치 */
+.container{
+    /* border: 1px solid red; */
+    width: 820px;
+    margin: 0 auto;
+}
+header{
+    border-bottom: 5px solid blue;
+    margin-bottom: 20px;
+}
+main{
+    /* border: 1px solid green; */
+    margin-bottom: 50px;
+}
+footer{
+    /* border: 1px solid gold; */
+}
+
+/* 4. detail (글씨크기, 글씨색, 배경색, 마진, 패딩 등) */
+
+/* header */
+header{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+header>h1{margin-bottom: 5px;}
+header>p{color: gray; font-style: italic;}
+
+
+/* main */
+main>h3{font-size: 2rem; font-weight: bold;margin-bottom: 10px;}
+main form{
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    background-color: #efefef;
+    margin-bottom: 20px;
+    /* 16진수 색상 표현법에서 똑같은 문자가 6개가 반복된다면 3자리로 줄여서 표현할 수 있다. */
+}
+main form *{vertical-align: middle;}
+
+
+/* main nation */
+/* .nation{
+    border: 1px solid greenyellow;
+} */
+.nation>section{
+    /* border: 1px solid red; 
+    box-sizing: border-box; */
+    float: left;
+    /* float를 사용하여 공중에 띄우게 되면 암묵적으로 display형태는 inline-block으로 변한다. */
+    width: calc((100% - 40px)/3);
+    margin-right: 20px;
+}
+.nation>section:last-of-type{margin-right: 0;}
+.nation::after{content: ""; display: block; clear: both;}
+
+.nation>section>h4{
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+.nation>section>ul{}
+.nation>section>ul>li{
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+.nation>section>ul>li:last-of-type{margin-bottom: 0;}
+.nation>section>ul>li>img{
+    float: left; 
+    margin-right: 10px;
+}
+.nation>section>ul>li::after{
+    content: ""; display: block; clear: both;
+}
+.nation>section>ul>li>a{color: rgb(20, 134, 187);}
+
+/* .imgFrame{float: left;}
+.textFrame{float: left;}
+.nation>section>ul>li::after{content: "";display: block;clear: both;} */
+
+
+/* footer */
+footer{
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    background-color: #efefef;
+}
+.fLeft{float: left; }
+.fRight{float: right; ;}
+footer::after{content: ""; display: block; clear: both;}
+
+footer dl>*{float: left;margin-right: 10px;}
+footer dl>dt{font-weight: bold; }
+footer dl>dd{color: blue;}
+
+footer dl>dd:nth-of-type(3),
+footer dl>dd:nth-of-type(4){
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+}
+footer dl>dd>a>img{padding-right: 5px;}
+
+footer dl::after{content: ""; display: block; clear: both;}
+.copy{ margin-top: 5px;}
+
+.bc{color: blue;}
+
+.fRight>*{
+    vertical-align: middle;
+}
+
+
+

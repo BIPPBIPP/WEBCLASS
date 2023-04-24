@@ -1,0 +1,90 @@
+*{margin: 0;padding: 0;}
+.box{
+    width: 1000px;
+    background-color: pink;
+    margin: 0 auto;
+
+}
+.box>section{
+    height: 300px;
+    font-size: 5rem;
+    float: left;
+}
+.box::after{
+    content: "";
+    display: block; 
+    clear: both;
+}
+
+.box .s1{
+    width: 250px;
+    background: red;
+    border: 50px solid lime;
+    box-sizing: border-box;
+}
+.box .s2{width: 250px;background-color: blue;}
+.box .s3{width: 250px;background-color: green;}
+.box .s4{width: 250px;background-color: gold;}
+
+
+.box2{
+    width: 1000px;
+    background: pink;
+    margin: 100px auto;
+}
+.box2>section{
+    font-size: 5rem;
+    float: left;
+}
+.box2:after{content: ""; display: block; clear: both;}
+
+.box2 .s1{
+    width: calc(50% - 5px);
+    background: red;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.box2 .s2{
+    width: calc(50% - 5px);
+    background: blue;
+    margin-bottom: 10px;
+}
+.box2 .s3{
+    width: calc(50% - 5px);
+    background: green;
+    margin-right: 10px;    
+}
+.box2 .s4{
+    width: calc(50% - 5px);
+    background: gold;
+}
+
+
+.box3{width: 1000px; background: skyblue; margin: 100px auto;}
+.box3>section{font-size: 5rem; float: right;}
+/* .box3:after{content: ""; display: block; clear: both;} */
+
+.box3 .s1{background:red ;margin-bottom:20px; width: calc((1000px - 40px)/3 );}
+.box3 .s2{background:blue ;margin-bottom:20px;margin-right: 20px;width: calc((1000px - 40px)/3 )}
+.box3 .s3{background:green ;margin-bottom:20px;margin-right: 20px;width: calc((1000px - 40px)/3 )}
+.box3 .s4{background:gold ;width: 1000px; float: none; clear: both;}
+
+
+.box4{width: 1000px; background: lightgrey; margin: 100px auto;}
+.box4>section{font-size: 5rem;}
+.box4:after{content: ""; display: block; clear: both;}
+
+.box4 .s1{background:red ;margin-right:20px; width: 300px; height: 640px; float: left;}
+.box4 .s2{background:blue ;margin-bottom:20px; width: calc(100% - 300px - 20px); height: calc((640px - 40px)/3); float: right;}
+.box4 .s3{background:green ;margin-bottom:20px;width: calc(100% - 300px - 20px); height: calc((640px - 40px)/3); float: right;}
+.box4 .s4{background:gold ;width: calc(100% - 300px - 20px);height: calc((640px - 40px)/3); float: right;}
+
+
+.box5{width: 1000px; background: lightgreen; margin: 100px auto;}
+.box5>section{font-size: 5rem;}
+.box5:after{content: ""; display: block; clear: both;}
+
+.box5 .s1{background: red; width: calc((100% - 40px)/3); height: calc((200px + 200px + 20px)); float: left; margin-right: 20px;}
+.box5 .s2{background: blue; width: calc((100% - 40px)/3); height: 200px; float: right;margin-bottom: 20px;}
+.box5 .s3{background: green; width: calc((100% - 40px)/3);height: calc((200px + 200px + 20px)); float: left;margin-right: 20px;}
+.box5 .s4{background: gold; width: calc((100% - 40px)/3);height: 200px; float: right;}

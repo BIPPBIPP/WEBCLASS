@@ -1,0 +1,123 @@
+/* 1.rest */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ul{list-style: none;}
+
+/* 2.common - style */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 3. layout - 크기, 배치 */
+.container{
+    /* border: 1px solid red; */
+    width: 820px;
+    margin: 0 auto;
+}
+
+/* 4. detail (글씨크기, 글씨색, 배경색, 마진, 패딩 등) */
+header{
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+}
+header .p1{
+    border-bottom: 5px solid blue;
+    font-style: italic;
+    color: gray;
+    padding-bottom: 3px;
+}
+
+.top{margin-top: 10px; margin-bottom: 20px;}
+.content h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.top p{
+    background-color: lightgray;
+    padding: 10px 10px;
+}
+
+
+.mid{margin-top: 10px; margin-bottom: 20px;}
+.mid::after{content: ""; display: block; clear: both;}
+.mid h3{font-size: 18px;font-weight: bold;border-bottom: 1px solid black;}
+.mid a{ color:rgb(47, 74, 195)}
+
+.asia{
+    /* border: 1px solid red; */
+    width: calc((100% - 40px)/3);
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.asia::after{content: ""; display: block; clear: both;}
+
+/* .li1::after{content: ""; display: block; clear: both;} 
+
+.li1 .img1{width: 50%;float: left;}
+.li1 .text1{float: left; width: 50%;}
+
+.li2 .img2{width: 50%; float: left;}
+.li2 .text2{width: 50%; float: right;}
+
+.li3 .img3{width: 50%;float: left;}
+.li3 .text3{width: 50%;float: right;}
+
+.li4 .img4{width: 50%;float: left;}
+.li4 .text4{width: 50%;float: right;} */
+
+div>ul>li{float: left;}
+div>ul>li::after{content: ""; display: block; clear: both;}
+li>div{float: left; margin-top: 10px;}
+.li1 .img1{margin-right: 20px;}
+.li2 .img2{margin-right: 20px;}
+.li3 .img3{margin-right: 20px;}
+.li4 .img4{margin-right: 20px;}
+
+
+.amercia{
+    width: calc((100% - 40px)/3);
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.eup{
+    width: calc((100% - 40px)/3);
+    float: left;
+    margin-bottom: 20px;
+}
+
+.webAd a{color: rgb(47, 74, 195) ;}
+.webAd .ad1{
+    margin-bottom: 20px;
+}
+.webAd .ad2{
+    margin-bottom: 20px;
+}
+
+
+footer{
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding: 10px;   
+}
+
+
+footer a{color: rgb(47, 74, 195);}
+/* .s1{width: 50%;} */
+.s1 b{font-weight: bold;}
+.s1{display: inline-block;}
+.s2>img{display: inline;}
+.s2>p{display: inline;}
+.s2{float: right;}
+.s2{display: flex;
+    align-items: center;}
+
+footer::after{content: ""; display: block; clear: both;}
+
+
+
