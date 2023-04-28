@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0;}
+.box{border: 1px solid red;
+width: 400px;
+height: 400px;
+margin: 0 auto;
+margin-top: 50px;
+border-radius: 200px;
+overflow: hidden;
+
+/* border-radius: 20px 40px 60px 80px; */
+}

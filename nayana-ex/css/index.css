@@ -6,201 +6,161 @@ strong,b{font-weight: normal;}
 a{text-decoration: none;color: inherit;}
 ul{list-style: none;}
 
+
+
 /* 2.common - style */
 html{
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+
 /* 3. layout - 크기, 배치 */
-body{
-    /* border: 1px solid red; */
-    margin: 0 auto;
-}
 
-header{
-    width: 980px;
+.container{
+    width: 920px;
     margin: 0 auto;
-    border: 1px solid blue;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-}
-
-main{
-    width: 980px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
 }
 
 footer{
-    width: 1920px;
-    background-color: #f0f0f0;
+    background-color: #efefef;
 }
+.fAll{
+    width: 920px;
+    margin: 0 auto;
+}
+
 
 /* 4. detail (글씨크기, 글씨색, 배경색, 마진, 패딩 등) */
 
 
 /* header */
-header>.logo>h1{
-     /* border: 1px solid red;      */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 header>nav{
-    border: 1px solid blue;
-    width: calc(100%/2);
     display: flex;
     flex-direction: column;
-    align-content:flex-end;
+   
 }
 
-header>nav>.lnb{
-    /* border: 1px solid green; */
-    background-color: black;
-    color: white;
-    font-size: 8px;
-    width: 200px;
+
+/* 먼저 메뉴 전체 설정을 한 다음에 li마다 설정을 해줘야 함 */
+.lnb{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    
+    justify-content: flex-end;
+    margin-bottom: 4px;
+}
+.lnb>li{
+    background-color: #000;
+    color: #fff;
+    font-size: 0.5rem;
+    border-right: 1px solid #fefefe;
+    padding: 2px 8px;
+
+}
+.lnb>li:last-of-type{
+    border: none;
 }
 
-header>nav>.lnb>li{
-    margin-right: 10px;
-    padding-left: 5px;
-    padding-right: 5px; 
-    border-right: 1px solid lightgray;}
-
-header>nav>.lnb>li:last-of-type{
-    margin-right: 0;
-    padding-right: 5px;  
+.gnb{
+    display: flex;
 }
 
-header>nav>.gnb{ 
-    border: 1px siolid blue;
-    font-size: 20px;
+.gnb>li{
+    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    margin-right: 10px;
+    justify-content: space-between;
+    padding: 2px 8px;
 }
 
-header>nav>.gnb>li{ 
-    padding-right: 20px;
-
-}
 
 /* main */
-main>.banner{
-    border: 1px solid red;
-    width: 100%;
-    margin-bottom:80px;
-}
 
-main>div{
-    width: 100%;
+main>.banner{
+    margin-bottom: 20px;
+}
+main>.contents{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: space-between;
+    
 }
 
-main>div>section{
-    width: calc((100% - 60px)/3);
+.contents>section{
+    width: calc((100% - 40px)/3);
 }
 
-main>.contents>section>h2{
+.left>h2{
+    margin-bottom: 5px;
     border-bottom: 1px solid gray;
-    margin-bottom: 10px;
+    padding-bottom: 3px;
 }
 
-main>.contents>.mid>h2>.title{margin-right: calc(100%/2);}
 
-
-main>.contents>.mid>ul>li>a>span{
-    margin-left: calc(100%/2);
-}
-
-main>div>section .right{
-    border: 1px solid blue;
-    width: calc(100%/3);
+.mid>h2{
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
     display: flex;
     flex-direction: row;
-    
-    flex-wrap: wrap;
-    
-}
+    justify-content: space-between;
+    padding-bottom: 3px;
 
-main>.contents>.right>ul{
+}
+.mid>ul>li>a{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
+}
 
-} 
-main>.contents>.right>ul>li{flex: 1;}
+.right>h2{
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 3px;
+}
+.right>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main{
+    margin-bottom: 50px;
+}
 
 /* footer */
 
-footer>.fAll{
-   border: 1px solid red;
-    width: 980px;
-    margin: 0 auto;
+footer>div{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
-
-
-/* header>nav{
-   width: calc(100%/2);
-   display: flex;
-   flex-direction: column;
-   align-items:;
-} */
-
-footer>div>.fLogo{
-   border: 1px solid green;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   /* margin-bottom: 20px;
-   margin-right: 10px; */
+.fLogo{
+    align-self: center;
 }
-footer>div>.fInfo>ul{
-    border: 1px solid blue;
-    margin-bottom: 5px;   
-    display: flex;  
+
+.fInfo{padding: 10px;}
+.fInfo>ul{
+    margin-bottom: 5px;
+    display: flex;
     flex-direction: row;
 }
+.fInfo>ul>li{padding: 2px 4px;}
+.fInfo>ul>li:first-of-type{padding: 0;}
 
-footer>div>.fInfo>ul>li{
-   margin-right: 10px;
-   padding-right: 5px;
-   border-right: 1px solid gray;}
-
-footer>div>.fInfo>ul>li:last-of-type{
-margin: 0;padding: 0; border: none;
+.fInfo>address{
+    padding-bottom: 4px;
+    margin-bottom: 10px;
 }
 
-footer>div>.fInfo>address{
-    border: 1px solid blue;
-    margin-bottom: 5px;   
-}
-footer>div>.fInfo>p{
-    border: 1px solid blue;
-    margin-bottom: 5px;   
-}

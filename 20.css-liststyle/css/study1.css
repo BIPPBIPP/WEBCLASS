@@ -1,0 +1,11 @@
+/* .none{list-style: none;}
+.disc{list-style-type: disc;}
+.circle{list-style-type: circle;}
+.square{list-style: square;}
+.upperA{list-style: upper-alpha;}
+.lowerA{list-style: lower-alpha;}
+.upperR{list-style: upper-roman;}
+.lowerR{list-style: lower-roman;} */
+
+.in{list-style-type:upper-roman;}
+.out{list-style-type: lower-alpha;}
