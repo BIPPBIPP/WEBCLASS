@@ -1,0 +1,254 @@
+/* 1.rest */
+*{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: normal;}
+address,em,i{font-style: normal;}
+strong,b{font-weight: normal;}
+a{text-decoration: none;color: inherit;}
+ol,ul{list-style: none;}
+
+/* 2.common */
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 3. layout */
+
+
+header{
+    border: 1px solid gold;
+    width: 1440px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+
+footer{
+    border: 1px solid blue;
+    margin: 0 auto;
+    width: 1440px;
+    display: flex;
+}
+
+/* 4. detail */
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+}
+header:hover{height:250px;}
+
+.logo img{
+    width: 150px;
+    height: 50px;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gnb{display: flex;}
+
+.gnb>li{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 60px;
+    position: relative;
+}
+.gnb>li>ul{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+}
+.gnb>li>ul>li{padding: 10px 0;}
+
+.lnb{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lnb>li{
+    border-right: 1px solid gray;
+    padding: 10px 10px;
+}
+.lnb>li:last-of-type{border: none;}
+
+
+
+/* main */
+
+.mainbanner video{
+    width: 100%;
+    height: 780px;
+    object-fit: cover;
+    margin: 0 auto;
+    
+}
+
+figure{margin-bottom: 60px;}
+
+.mainbanner img{
+    width: 450px;
+    position: absolute;
+    left: calc((100% - 450px)/2);
+    top: 200px;
+}
+
+.mainbanner p{
+    width: 300px;
+    height: 70px;
+    background-color: #fff;
+    opacity: 80%;
+    position: absolute;
+    left: calc((100% - 300px)/2);
+    top: calc((100% - 200px)/2);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+
+main>.news{
+    width: 1440px;
+    height: 175px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+}
+
+.news>h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.news>section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news>section>div{
+
+    border-right: 1px solid gray;
+}
+.news>section>div:last-of-type{border: none; padding: none;}
+
+.news>section>div>h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+.news>section>div>.date{
+    font-size: 0.8rem;
+    padding-bottom: 28px;
+}
+.news>section>div>.cont{
+    font-size: 1.1rem;
+}
+
+main>.corinfo{
+    border: 1px solid orange;
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 160px;
+}
+.corinfo img{
+    width: 285px;
+    
+}
+.corinfo>a>h4{
+    border: 1px solid red;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight:600;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: calc((100% - 111.88)/2);
+    top: calc(100% - 200px);
+}
+
+.corinfo>a>p{
+    border: 1px solid red;
+    padding: 10px 30px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: calc(100% - 150px);
+}
+
+
+
+
+
+
+
+
+main>.subNews{
+    border: 1px solid orange;
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 190px;
+}
+
+.subNews{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subNews img{
+    border: 1px solid gold;
+    width: 345px;
+    margin-bottom: 10px;
+}
+.subNews p{
+    font-size: 1rem;
+    color: #ababab;
+    margin-bottom: 15px;
+}
+
+.subNews h3{
+    border: 1px solid lime;
+    width: 345px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+footer>.fMenucontainer{
+    border: 1px solid violet;
+    display: flex;
+}

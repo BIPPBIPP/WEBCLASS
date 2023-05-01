@@ -1,0 +1,87 @@
+*{margin: 0;padding: 0;}
+body{margin-bottom: 500px;}
+
+.boxa{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    
+}
+@keyframes hyunRotate{
+    0%{transform: rotate(0deg);}
+    25%{border-radius: 50%;}
+    50%{background: red;}
+    100%{transform: rotate(360deg);}
+}
+.boxa:hover{
+    animation-name: hyunRotate;
+    animation-duration: 10s;
+    /* 속도 */
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    /* iteration-count : 돌아가는 횟수. infinite는 무한 */
+    animation-direction:alternate;
+    /* direction은 방향을 설정. 
+    normal : 기본값 (0%->100%)
+    reverse : 100% ->0% 방향으로 작용.
+    alternate : 0에서 100으로 100에서 0으로 방향을 바꿈. 그래서 튕기듯이 효과가 나타남.
+     */
+    /* 축약형 : animation: hyunRotate 1s linear 0s infinite ; */
+}
+
+.box1{
+    width: 400px;
+    height: 400px;
+    background: blue;
+}
+
+/* animation */
+/* @keyframes blueNemo {
+   0%{transform: translateX(0);}
+   25%{transform: translateX(100% 0);}
+   50%{transform: translateY(100% 100%);}
+   75%{transform: translateX(0 100%);}
+   100%{transform: translateY(0%);}
+} */
+
+@keyframes blueNemo {
+    0%{transform: translate(0%);}
+    25%{transform: translate(100%, 0%);}
+    50%{transform: translate(100%, 100%);}
+    75%{transform: translate(0%, 100%);}
+    100%{transform: translate(0%);}
+
+    /* translate(--% ,(콤마 꼭!) --% */
+    
+}
+
+.box1{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    animation: blueNemo 4s linear 0s 
+    /* infinite; */
+    transition: all 0.5s ease 0s;
+}
+.box1:hover{
+    animation-play-state: paused;
+    background: red;
+    border-radius:50%;
+}
+
+/* 마우스를 올렸을 대 애니메이션이 일시정지 됨 */
+
+.spantag{
+    border: 1px solid red;
+    transition: all 0.5s ease 0s;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: 0;
+}
+.spantag:hover{
+    transform: rotate(90deg);
+}

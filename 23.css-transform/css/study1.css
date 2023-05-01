@@ -1,0 +1,53 @@
+*{margin: 0;padding: 0;}
+
+.box{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    transition: all 0.5s ease 0s;
+}
+
+.a{
+    /* transform: translateX(100%); */
+    /* 100%는 자신의 너비만큼 이동한다  */
+}
+.a:hover{transform: translateX(60%);}
+/* x축 기준으로 자리이동 */
+.b:hover{transform: translateY(-60%);}
+/* y축 기준으로 자리이동 */
+.c:hover{
+    /* transform: translateX(50%) translateY(50%); */
+    transform: translate(50%, -50%);
+}
+/* x,y축 기준으로 자리이동 */
+.d:hover{transform: translateZ(100px);}
+/* z축 기준으로 자리이동 
+-> but, z축은 공간의 기준점을 지정해 주어야 한다.*/
+.parent{ 
+    border:1px solid blue;, height: 60vh;
+    perspective: 600px; perspective-origin: 50% 50%;
+}
+/* perspective -> transform이 되는 공간의 기준(공간의 크기)을 정해주는 것.
+   perspective-origin -> transform이 되는 공간의 기준점(공간의 좌표)을 정해주는 것. */
+
+.e{transform-origin: 0% 50%;}
+/* transform-origin은 변하기 전 속성에 넣어놓는게 좋다. */
+.e:hover{transform: scaleX(2);}
+/* x축 기준으로 크기가 커짐 */
+.f:hover{transform: scaleY(2);}
+/* y축 기준으로 크기가 커짐 */
+
+.g:hover{transform: scale(1.5);}
+/* 그냥 scale은 전체적인 크기가 커지는 것 */
+
+.h{transform-origin: 10% 10%;}
+.h:hover{transform: rotate(360deg);}
+/* transform-origin으로 좌표를 고정하고 이 고정축을 기준으로 회전 */
+
+.i:hover{transform: rotateX(180deg);}
+/* x축을 기준으로 회전 -> 아래,위로 뒤집어진 것처럼 보임 */
+
+.j:hover{transform: rotateY(180deg);}
+/* y축을 기준으로 회전 -> 좌,우로 뒤집어진 것처럼 보임 */
+
