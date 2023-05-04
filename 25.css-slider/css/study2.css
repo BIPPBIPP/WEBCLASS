@@ -5,32 +5,29 @@ ul,ol{list-style: none;}
 /* layout */
 
 .station{
-    width: 1270px;
-    height: 600px;
+    border: 1px solid red;
+    width: 800px;
+    height: 400px;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+
 }
 
 .train{
-    border: 1px solid red;
-    background:pink;
-    width: calc(400%/2);
-    /* 기차의 너비를 보이길 원하는 슬라이드의 갯수로 나누면 됨 */
-    height: 100%;
-    display: flex;
-    transform: translateX(0px);
-    transition: all 0.5s ease 0s;
+    background: skyblue;
+    width: 100%;
+    transition: all 1s ease 0s;
+    transform: traslateY(0%);
 }
-/* .train:hover{
-    transform: translateX(-1000px);
-} */
 
 .train>li{
-    border: 1px solid gold;
-    /* width: 25%; */
-    flex: 1;
-    
+    width: 100%;
+    height:400px;
+    /* li에 값을 직접 매기기 */
+    border: 1px solid blue;
+    box-sizing: border-box;
+
 }
 
 .controler{
@@ -63,3 +60,4 @@ ul,ol{list-style: none;}
 .pagination>li.on{}
 .pagination>li:first-of-type{opacity: 100%;}
 .pagination>li:last-of-type{margin: 0;}
+

@@ -1,0 +1,46 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+
+
+/* layout */
+
+.station{
+    border: 1px solid gold;
+    width: 1270px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.train{
+    border: 1px solid red;
+    background: pink;
+    width: 400%;
+    /* 400%인 이유 : 
+    100%는 li 1개의 너비로 즉, station 안에 4개의 li가 들어갔을 때의 너비인 것. 그렇기 때문에 400%(li의 개수만큼 계산)로 계산을 하여 너비를 결정해 주어야 함. 그래야 station만큼의 너비로 지정됨.  */
+    height: 100%;
+    display: flex;
+
+}
+
+.train>li{
+    border: 1px solid blue;
+    /* width: 100%; */
+    /* li 하나의 너비는 ul(station)에 지정된 너비값을 따라감.
+    ul이 li의 부모태그이기 때문에. */
+    /* height: 100%; */
+    flex: 1;
+}
+
+.controler{
+    border: 1px solid aqua;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
