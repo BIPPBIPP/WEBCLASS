@@ -61,7 +61,7 @@ body{margin-bottom: 500px;}
     width: 400px;
     height: 400px;
     background-color: blue;
-    animation: blueNemo 4s linear 0s 
+    animation: blueNemo 4s linear 0s; 
     /* infinite; */
     transition: all 0.5s ease 0s;
 }

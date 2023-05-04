@@ -1,0 +1,64 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+
+
+/* layout */
+
+.station{
+    width: 1270px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.train{
+    border: 1px solid red;
+    background:pink;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transform: translateX(0px);
+    transition: all 0.5s ease 0s;
+}
+/* .train:hover{
+    transform: translateX(-1000px);
+} */
+
+.train>li{
+    border: 1px solid gold;
+    /* width: 25%; */
+    flex: 1;
+    
+}
+
+.controler{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.pagination{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* top: 80%; */
+    bottom: 20px;
+    display: flex;
+}
+.pagination>li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #000;opacity: 40%;
+}
+.pagination>li.on{}
+.pagination>li:first-of-type{opacity: 100%;}
+.pagination>li:last-of-type{margin: 0;}

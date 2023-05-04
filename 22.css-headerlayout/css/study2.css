@@ -1,0 +1,103 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: inherit;}
+
+/* layout */
+
+header{
+    background: rgb(243, 181, 23);
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 200px;
+    height: 100%;
+    transition: all 0.5s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+header:hover{
+    width: 300px;
+}
+header>h1{}
+
+header::after{
+    content: '';
+}
+/* header의 after을 한 만들어 컨텐츠를 3개로 만든 후, space-between을 해 가운데 컨텐츠인 gnb가 center에 옴 */
+.gnb{
+    border: 1px solid lime;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* .gnb{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    box-sizing: ;
+} */
+/* .center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center>.gnb{
+    border: 1px solid lime;
+    width: 100%;
+} */
+
+
+
+.gnb>li{
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+    border-bottom: 1px solid #ddd;
+}
+.gnb>li:hover{
+    height: 220px;
+}
+.gnb>li>a{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding-left: 50px;
+}
+/* .gnb>li>ul{border: 1px solid skyblue;} */
+.gnb>li>ul>li{height: 40px;}
+.gnb>li>ul>li:hover{
+    background: black;
+    color: #fff;
+}
+.gnb>li>ul>li>a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 60px;
+}
+
+
+.container{
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    transition: all 0.5s ease 0s;
+}
+header:hover + .container{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+}
+
+.container>div{
+    height: 100vh;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+

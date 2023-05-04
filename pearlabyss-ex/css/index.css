@@ -225,37 +225,64 @@ main{position: relative;}
     font-size: 1rem;
 }
 
-.corinfo{
+
+.culture{
     width: 1440px;
+    height: 570px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    position: relative;
     margin-bottom: 160px;
-}
-.corinfo img{
-    width: 288px; 
-}
-.corinfo>a>h4{
-    padding: 10px 30px;
-    font-size: 1.5rem;
-    font-weight:600;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    left: calc((100% - 111.88)/2);
-    top: calc(100% - 200px);
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
 }
 
-.corinfo>a>p{
-    padding: 10px 30px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #fff;
-    position: absolute;
-    top: calc(100% - 150px);
+
+.culture img:hover {
+    transform: scale(1.2);
 }
+
+
+.culture>ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.culture>ul>li{
+    position: relative;
+}
+.culture>ul>li h4{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 50%; bottom: 20%;
+    transform: translate(-50%,-20%);
+}
+.culture>ul>li h4:after{
+    content: '';
+    background: #fff;
+    height: 1px;
+    width: 50px;
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translateX(-50%);
+}
+
+.culture>ul>li p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
+    position: absolute;
+    left: 50%; bottom: 10%;
+    transform: translate(-50%,-10%);
+}
+
 
 main>.subNews{
     width: 1440px;
@@ -267,12 +294,19 @@ main>.subNews{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
+
+
 
 .subNews img{
     width: 345px;
     margin-bottom: 10px;
 }
+.subNews img:hover {
+    transform: scale(1.2);
+}
+
 .subNews p{
     font-size: 1rem;
     color: #ababab;
@@ -288,10 +322,10 @@ main>.subNews{
 /* footer */
 
 footer{
-    border: 1px solid blue;
     padding-top: 70px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 footer::before{
     content: '';
@@ -301,9 +335,16 @@ footer::before{
     position: absolute;
     left: 0; top: 0;
 }
+footer::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #999;
+    position: absolute;
+    left: 0; top: 100%;
+}
 
 footer>section{
-    border: 1px solid lime;
     width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -318,7 +359,6 @@ footer>section{
     margin-bottom: 35px;
 }
 .fMenucontainer>div{
-    border: 1px solid salmon;
     flex: 1;
 }
 
@@ -338,7 +378,6 @@ footer>section{
 }
 
 .corinfo_f h4{
-    border: 1px solid salmon;
     flex: 1;
     font-size: 1.2rem;
     font-weight: bold;
@@ -351,42 +390,46 @@ footer>section>.corinfo_f>a>.per{
 }
 
 
-footer>.corinfo_last{
+.corinfo_last{
+    width: 1440px;
+    margin: 0 auto;
     padding: 30px 0;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-footer>.corinfo_last::before{
+
+.corinfo_last::before{
     content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: #999;
-    position: absolute;
-    left: 0; top: 0%;
+    width: calc(100%/3);
 }
-
-footer>.corinfo_last>section{
-    padding-left: 520px;
+.corinfo_last>section{
+    width: calc(100%/3);
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-footer>.corinfo_last>section>a>img{
+.corinfo_last>section>a>img{
     width: 125px;
     height: 20px;
-    padding-right: 40px;
+   margin-right: 40px;
 }
-footer>.corinfo_last>section>p{
+.corinfo_last>section>p{
     font-size: 1rem;
     color: #ababab;
 }
 
-footer>.corinfo_last>.icon>a>img{
-    width: 37px;
-    height: 37px;
-    padding-right: 10px;
+.icon{
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100%/3);
 }
-footer>.corinfo_last>.icon>a>img:last-of-type{padding-right: 0;}
+.corinfo_last>.icon img{
+    width: 40px;
+    height: 40px;
+    padding: 0 5px;
+}
+.corinfo_last>.icon img:last-of-type{margin-right: 0;}
