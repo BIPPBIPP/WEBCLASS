@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표 예제</title>
+</head>
+<body>
+    <h1>퀴즈</h1>
+    <p>
+       사용자에게 이름과 국어, 영어, 수학 점수를 물어보고, 평균점수를 계산하여,
+       평균점수가 90점 이상이라면 A등급, 
+                 80점 이상이라면 B등급, 
+                 70점 이상이라면 c등급, 
+                 70점 미만이라면 D등급,
+                 이라는 정보를 body태그에 필기하는 소스코드를 만들어 보시오.
+        [답안예시 : ㅇㅇㅇ님의 평균점수는 00점이며 0등급입니다.]
+    </p>
+    <script>
+        let name = prompt("이름을 입력해주세요.");
+        let scoreKo = Number(prompt("국어점수를 입력해주세요."));
+        let scorEn = Number(prompt("영어점수를 입력해주세요."));
+        let scoreMa = Number(prompt("수학점수를 입력해주세요."));
+        let scoreAver = Number((scoreKo+scorEn+scoreMa)/3);
+        let grade = (90<=scoreAver?"A":80<=scoreAver?"B":70<=scoreAver?"C":scoreAver<70?"D":0);
+        
+        // alert([`${name}님의 평균점수는 ${scoreAver}점이며 ${grade}입니다.`]);
+        document.write(`<h1>[${name}]님의 평균점수는 ${scoreAver}점이며 ${grade}등급입니다.</h1>`);
+
+
+    </script>
+    
+</body>
+</html>

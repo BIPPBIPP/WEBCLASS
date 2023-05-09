@@ -163,6 +163,7 @@ main{position: relative;}
     font-size: 1.4rem;
     font-weight: blod;
     background: rgba(255,255,255,0.3);
+    border-radius: 3px;
     padding: 30px 110px;
     display: inline-block;
 }
@@ -231,91 +232,127 @@ main{position: relative;}
     height: 570px;
     margin: 0 auto;
     margin-bottom: 160px;
-    overflow: hidden;
-    transition: all 0.5s ease 0s;
-}
-
-
-.culture img:hover {
-    transform: scale(1.2);
-}
-
-
-.culture>ul{
     
+    /* overflow: hidden; */
+}
+.culture>ul{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
-.culture>ul>li{
-    position: relative;
+.culture>ul>li{flex: 1;position: relative;}
+
+.culture>ul>li>a img{
+    filter: grayscale(1) brightness(0.9);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease 0s;
 }
-.culture>ul>li h4{
+
+.culture>ul>li:hover img{
+    transform: scale(1.1);
+    filter: grayscale(0) brightness(1);
+}
+
+.culture>ul>li>a .box{
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top:70%;
+    transform: translate(-50%, -70%);
+    text-align: center;  
+}
+
+.box>h4{
+    /* border: 1px solid orange; */
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
-    padding: 10px 20px;
-    display: block;
-    text-align: center;
-    position: absolute;
-    left: 50%; bottom: 20%;
-    transform: translate(-50%,-20%);
+    margin-bottom: 20px;
+    transition: all 0.4s ease 0s;
+
 }
-.culture>ul>li h4:after{
-    content: '';
-    background: #fff;
-    height: 1px;
-    width: 50px;
-    position: absolute;
-    left: 50%; bottom: 0;
-    transform: translateX(-50%);
+.culture>ul>li:hover h4{
+    transform: translateY(-30%);
 }
 
-.culture>ul>li p{
-    font-size: 1rem;
+.box>p{
+    /* border: 1px solid aqua; */
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #fff;
-    padding: 10px 0px;
-    text-align: center;
+    position: relative;
+    padding: 20px 0;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+}
+.culture>ul>li:hover p{
+    transform: translateY(-30%);
+    opacity: 1;
+}
+.box>p::after{
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 1px;
     position: absolute;
-    left: 50%; bottom: 10%;
-    transform: translate(-50%,-10%);
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    
 }
 
-
-main>.subNews{
+.subNews{
+    /* border: 1px solid salmon; */
     width: 1440px;
+    height: 300px;
     margin: 0 auto;
     margin-bottom: 190px;
 }
 
-.subNews{
+.subNews>ul{
+    /* border:1px solid red; */
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    
+}
+.subNews>ul>li{
+    width: calc((100% - 100px)/4) ;
+    height: 100%;
+    /* border:1px solid gold; */
+}
+
+.subNews>ul>li>a>.newsImg{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     overflow: hidden;
-}
-
-
-
-.subNews img{
-    width: 345px;
-    margin-bottom: 10px;
-}
-.subNews img:hover {
-    transform: scale(1.2);
-}
-
-.subNews p{
-    font-size: 1rem;
-    color: #ababab;
     margin-bottom: 15px;
 }
 
-.subNews h3{
-    width: 345px;
-    font-size: 1.3rem;
+.subNews>ul>li>a>.newsImg>img{
+    /* border: 1px solid violet; */
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease 0s;   
+}
+.subNews>ul>li img:hover{transform: scale(1.1);}
+
+.subNews>ul>li p{
+    font-size: 1rem;
+    color: #ababab;
+    margin-bottom: 10px;
+}
+.subNews>ul>li h3{
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
@@ -358,9 +395,7 @@ footer>section{
     color: #999;
     margin-bottom: 35px;
 }
-.fMenucontainer>div{
-    flex: 1;
-}
+.fMenucontainer>div{flex: 1;}
 
 .fMenucontainer h4{
     color: #000;
@@ -368,7 +403,7 @@ footer>section{
     font-weight: 600;
 }
 
-.fMenucontainer>div p{padding: 10px 0;}
+.fMenucontainer>div p{padding-top: 10px;}
 
 .corinfo_f{
     margin-bottom: 80px;

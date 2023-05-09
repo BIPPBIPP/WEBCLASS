@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자와 숫자데이터 활용</title>
+</head>
+<body>
+    <h1>typeof()</h1>
+    <p>괄호 안의 데이터가 문자인지 숫자인지 검사하고 검사한 결과를 그 자리(typeof()도구가 실행된 자리)에 남겨주는 도구</p>
+    <p>typeof()도구는 숫자가 괄호 안에 재료로 사용되면 결과를 "number"라고 남기고, 문자데이터가 괄호 안에 재료로 사용되면 결과를 "string"이라고 남긴다.</p>
+    <script>
+        typeof(500)
+    </script>
+
+    <h1>prompt()</h1>
+    <p>홈페이지의 사용자에게 괄호 안의 질문을 하고 사용자가 입력한 대답을 그 자리에 문자데이터 형태로 남기는 도구</p>
+    <script>
+        // alert(prompt("당신의 나이를 입력해주세요")+"님 환영합니다")
+        // alert와 마찬가지로 알림창으로 뜨고, 내용을 입력할 수 있는 입력창이 만들어짐.
+        // alert 안에 prompt가 들어간다면, prompt에 입력한 값이 alert창에 나타남.(가장 먼저 prompt가 명령됨)
+        // alert(typeof(prompt("당신의 나이를 입력해주세요")))
+        // typeof의 값은 alert의 창에 표시됨.
+    </script>
+    <h1>Number()</h1>
+    <p>Number()도구는 괄호 안에 들어간 숫자 비스무리한 문자데이터를 진짜 숫자데이터로 변경하여 그 자리에 남긴다.</p>
+    <script>
+    //    alert(Number("3000")+100)
+    //    number()을 숫자데이터로 인식. -> 사칙연산가능
+    // alert(typeof(Number(prompt("당신의 나이를 입력해주세요")))+"님 환영합니다")
+    // typeof는 Number의 값을 인식하기 때문에 alert창에 "number"이란 값이 나옴.
+    </script>
+
+    <h1>document.write()</h1>
+    <p>document.write()도구는 괄호 안에 들어간 데이터를 body태그에 그대로 필기해주는 도구이다.</p>
+    <!-- 안녕하세요!!! (밑에 script태그에 사용한 것과 옆에 태그 없이 쓰는 것의 형태가 같음) -->
+    <!-- <script>
+        document.write("안녕하세요!!!")
+    </script> -->
+    <script>
+        // document.write("안녕하세요!!!ㅇㅇㅇ님 반갑습니다")
+        document.write("<h1>안녕하세요!!!"+"" + prompt("당신의 이름을 입력해주세요") +"님 반갑습니다</h1>")
+        // prompt창에서 입력한 값(이름)이 document.write 해당 부분에 적용됨. +를 이용하여 문자데이터를 연결하여 나타냄.
+    </script>
+
+</body>
+</html>

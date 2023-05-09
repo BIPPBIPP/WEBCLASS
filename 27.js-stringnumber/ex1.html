@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표 예제</title>
+</head>
+<body>
+
+    <h1>성적표 예제</h1>
+    <p>퀴즈) 사용자에게 이름과 국어, 영어, 수학 점수를 물어보고 평균점수를 구해서 알림창에 나타내보시오.</p>
+    <p>답안예시 [정현진님의 평균점수는 90점 입니다.]</p>
+
+    <script>
+        
+        let name = prompt("이름을 입력하시오.")
+        let scoreKo = Number(prompt("국어점수 입력"))
+        let scoreEn = Number(prompt("영어점수 입력"))
+        let scoreMa = Number(prompt("수학점수 입력"))
+        // prompt()는 문자데이터이기 때문에 변수에서 Number()안에 넣어 숫자데이터로 변형해 주어야 연산이 가능함.
+        // 변수명은 영어로만 작성 가능. 숫자,특수문자, 한글 등으로 작성하면 에러 발생.
+
+        let scoreAver = (scoreKo+scoreEn+scoreMa)/3
+        // alert(""+name+"님의 평균점수는 "+scoreAver+"점 입니다.")
+        alert(`[${name}님의 평균점수는 ${scoreAver}점 입니다.]`)
+        document.write(`[${name}님의 평균점수는 ${scoreAver}점 입니다.]`)
+        // ``백틱 - 백틱을 사용하면, 줄바꿈 등을 쉽게 표현할 수 있다.
+        // "",''을 사용하면 +로 여러번 이어 붙여야 한다.
+        // ${}사이에 변수나 연산 등을 삽입할 수 있rh, ``백틱 안에서만 사용 가능. '',"" 안에서는 사용 불가.
+
+
+    </script>
+
+</body>
+</html>
