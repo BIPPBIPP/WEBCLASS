@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성적표 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
 </head>
 <body>
     <h1>퀴즈</h1>
@@ -18,17 +19,50 @@
         [답안예시 : ㅇㅇㅇ님의 평균점수는 00점이며 0등급입니다.]
     </p>
     <script>
+        // 숫자로 계산이 되어야 하기 때문에 숫자로 인식되어지는 Number()도구 사용
         let name = prompt("이름을 입력해주세요.");
         let scoreKo = Number(prompt("국어점수를 입력해주세요."));
         let scorEn = Number(prompt("영어점수를 입력해주세요."));
         let scoreMa = Number(prompt("수학점수를 입력해주세요."));
         let scoreAver = Number((scoreKo+scorEn+scoreMa)/3);
-        let grade = (90<=scoreAver?"A":80<=scoreAver?"B":70<=scoreAver?"C":scoreAver<70?"D":0);
         
+        // let grade = (90<=scoreAver?"A":80<=scoreAver?"B":70<=scoreAver?"C":scoreAver<70?"D":0);
+        let grade = scoreAver>=90? "A":
+                    scoreAver>=80? "B":
+                    scoreAver>=70? "C":"D"        
         // alert([`${name}님의 평균점수는 ${scoreAver}점이며 ${grade}입니다.`]);
-        document.write(`<h1>[${name}]님의 평균점수는 ${scoreAver}점이며 ${grade}등급입니다.</h1>`);
+        document.write(
+            `<table class="gradeStyle">
+        <caption>${name}님의 성적표</caption>
+        <tr>
+            <th>국어</th>
+            <td>${scoreKo}점</td>
+        </tr>
+        <tr>
+            <th>영어</th>
+            <td>${scoreMa}점</td>
+        </tr>
+        <tr>
+            <th>수학</th>
+            <td>${scorEn}점</td>
+        </tr>
+        <tr>
+            <th>총합</th>
+            <td>${scoreKo+scorEn+scoreMa}점</td>
+        </tr>
+        <tr>
+            <th>평균</th>
+            <td>${scoreAver}점</td>
+        </tr>
+        <tr>
+            <th>등급</th>
+            <td>${grade}등급</td>
+        </tr>
 
+    </table>`
+    );
 
+    // html작성 후, document.write()안에 작성한 html을 복사해 넣어준다.
     </script>
     
 </body>

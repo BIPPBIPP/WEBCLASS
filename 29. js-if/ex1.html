@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만도 예제</title>
+</head>
+<body>
+    <h1>퀴즈</h1>
+    <pre>사용자에게 체중과 키를 입력받아서 bmi수치를 계산하여 수치에 따라 비만, 과체중, 정상, 저체중으로 나누어 결과를 body태그에 필기하는 소스코드를 완성해보세요.
+        bmi 계산식
+        70kg의 170cm의 bmi수치 계산식
+        70/(1.7*1.7)
+        몸무게/(키*0.01)*(키*0.01)
+
+        계산된 bmi가 25이상이라면 비만
+                    23이상 24.9이하 과체중
+                    18.5 이상 22.9이하 정상
+                    18.5 이하 저체중
+
+        완성예시 ) 당신의 키는 00cm이고, 몸무게는 00kg입니다. bmi수치는 24.2이며 과체중입니다.
+
+    </pre>
+
+    <script>
+        let height = Number(prompt("신장을 입력해주세요."));
+        let weight = Number(prompt("체중을 입력해주세요."));
+        let bmi = weight/(Math.pow(height/100,2));
+
+        let bmiResult = 25<= bmi? "비만":
+                    23<=bmi && bmi<=24.9? "과체중":
+                    18.5<=bmi && bmi<=22.9? "정상" : "저체중"
+
+                    // 삼항연산으로 변수를 만들 수 있음.
+
+        // let bmiResult;
+        // if(25<= bmi){
+        //    bmiResult ="비만"
+        // }else if(23<=bmi && 24.9>=bmi){
+        //     bmiResult ="과체중"
+        // }else if(18.5<=bmi && 22.9>=bmi){
+        //     bmiResult ="정상"
+        // }else if(bmi<=18.5){
+        //     bmiResult ="저체중"
+        // }
+
+        // 조건문을 변수에 적용하려고 할 때는 먼저 변수의 메모리만 만들어 놓고, 데이터는 조건문 안에 적용하면 된다.
+
+        document.write(`<h1>당신의 키는 ${height}cm이고, 몸무게는 ${weight}kg입니다. bmi수치는 ${bmi}이며 ${bmiResult}입니다.</h1>`)
+    </script>
+</body>
+</html>
