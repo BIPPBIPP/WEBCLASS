@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문의 중첩</title>
+</head>
+<body>
+    <h1>반복문의 중첩</h1>
+    <script>
+        let a = 0;
+        while(a<3){
+            a++;
+            //a=a+1;
+            let b =0;
+            while(b<2){
+                b++;
+                //b=b+1;
+                document.write(`a의 값은 ${a}이고 b의 값은 ${b}이다.<br>`)
+            }   
+        }
+        // a는 3까지 3번 반복, b는 2까지 2번 반복 -> 하지만 a에 대해 b가 1,2로 두번씩 반복이 되니까 a가 1일때 b가 1,2 / a가 2일때 b가 1,2/a가 3일때 b가 1,2로 총 6번 반복으로 a가 하나의 값일때 2번 나타남.
+    </script>
+    
+</body>
+</html>

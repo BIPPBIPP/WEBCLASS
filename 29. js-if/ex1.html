@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비만도 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
 </head>
 <body>
     <h1>퀴즈</h1>
@@ -24,30 +25,77 @@
     </pre>
 
     <script>
+        let name = prompt("이름을 입력해주세요.")
         let height = Number(prompt("신장을 입력해주세요."));
         let weight = Number(prompt("체중을 입력해주세요."));
         let bmi = weight/(Math.pow(height/100,2));
+        //Math.pow는 제곱하는 도구 -> Math.pow(곱할 수 ,제곱수)
 
-        let bmiResult = 25<= bmi? "비만":
-                    23<=bmi && bmi<=24.9? "과체중":
-                    18.5<=bmi && bmi<=22.9? "정상" : "저체중"
+        // let bmiResult = 25<= bmi? "비만":
+        //             23<=bmi && bmi<=24.9? "과체중":
+        //             18.5<=bmi && bmi<=22.9? "정상" : "저체중"
 
                     // 삼항연산으로 변수를 만들 수 있음.
 
-        // let bmiResult;
-        // if(25<= bmi){
-        //    bmiResult ="비만"
-        // }else if(23<=bmi && 24.9>=bmi){
-        //     bmiResult ="과체중"
-        // }else if(18.5<=bmi && 22.9>=bmi){
-        //     bmiResult ="정상"
-        // }else if(bmi<=18.5){
-        //     bmiResult ="저체중"
-        // }
+        // =는 우측에 있는 것을 왼쪽에 저장한다.            
+        // let cc;
+        // cc = bmiResult = "비만"; => cc에 bmiResult를 저장하고 bmiResult의 값인 "비만"을 저장한다.
+        let bmiResult;
+        if(25<= bmi){
+           bmiResult ="비만"
+        }else if(23<=bmi && 24.9>=bmi){
+            bmiResult ="과체중"
+        }else if(18.5<=bmi && 22.9>=bmi){
+            bmiResult ="정상"
+        }else if(bmi<=18.5){
+            bmiResult ="저체중"
+        }
 
         // 조건문을 변수에 적용하려고 할 때는 먼저 변수의 메모리만 만들어 놓고, 데이터는 조건문 안에 적용하면 된다.
 
-        document.write(`<h1>당신의 키는 ${height}cm이고, 몸무게는 ${weight}kg입니다. bmi수치는 ${bmi}이며 ${bmiResult}입니다.</h1>`)
+        // document.write(`<h1>당신의 키는 ${height}cm이고, 몸무게는 ${weight}kg입니다. bmi수치는 ${bmi}이며 ${bmiResult}입니다.</h1>`)
+        document.write(`<table class="bmiStyle">
+            <caption>${name}님의 비만도 검사 결과</caption>
+            <tr>
+                <th>신장</th>
+                <td>${height}cm</td>            
+            </tr>
+            <tr>
+                <th>몸무게</th>
+                <td>${weight}kg</td>            
+            </tr>
+            <tr>
+                <th>BMI</th>
+                <td>${bmi}</td>            
+            </tr>
+            <tr>
+                <th>결과</th>
+                <td>${bmiResult}</td>            
+            </tr>
+            </table>
+        `)
     </script>
+    <!-- <table class="gradeStyle">
+        <caption>ㅇㅇㅇ님의 비만도 검사 결과</caption>
+        <tr>
+            <th>신장</th>
+            <td>170cm</td>            
+        </tr>
+        <tr>
+            <th>몸무게</th>
+            <td>00kg</td>            
+        </tr>
+        <tr>
+            <th>BMI</th>
+            <td>00</td>            
+        </tr>
+        <tr>
+            <th>결과</th>
+            <td>정상</td>            
+        </tr>
+    </table> -->
+
+
+
 </body>
 </html>
