@@ -1,0 +1,8 @@
+js
+
+원시데이터 형태 
+- string
+- number
+- boolean
+
+참조데이터 형태
