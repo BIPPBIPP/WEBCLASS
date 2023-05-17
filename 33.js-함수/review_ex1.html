@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        평균점수를 재료로 하여 등급을 리턴하는 함수를 만들어 보시오.
+        평균점수가 90점 이상이면 A
+                  80점 이상이면 B
+                  70점 이상이면 C
+                  70점 미만이면 D등급을 리턴하는 함수를 만들어보시오.
+    </pre>
+    <script>
+        // 1. 평균값 구하기
+        function getAver(kor,eng,mat){
+            return (kor+eng+mat)/3;
+        }
+        let kor = Number(prompt("국어점수"));
+        let eng = Number(prompt("영어점수"));
+        let mat = Number(prompt("수학점수"));
+        let aver = getAver(kor,eng,mat) ;
+
+         // 2. 등급 나누기
+         // aver는 위에서 aver의 변수를 지정해 주었기 때문에 위에서 계산된 let aver의 값이 대입된다.
+        function getGrade(aver){
+            let grade;
+            //함수 안의 let grade는 함수 안에서 지정되는 grade의 변수인 것.
+            if(aver>=90){
+                grade="A"
+            }else if(aver>=80){
+                grade="B"
+            }else if(aver>=70){
+                grade="c"
+            }else if(aver<70){
+                grade="D"
+            }
+
+            return grade;
+            // return에 의해 함수 안에서 변수 grade의 자리에 계산된 grade가 자리에 남겨지는 것.
+        }
+       
+        let grade = getGrade(aver);
+        // 함수 밖에 grade의 변수를 한번 더 지정해준다.
+        document.write(`<h1>국어점수 ${kor}점, 영어점수 ${eng}점, 수학점수 ${mat}점, 평균 ${aver}점, ${grade}등급</h1>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+</head>
+<body>
+    <pre>
+        퀴즈) 
+        다음과 같은 변수가 있다. 
+        국어점수  영어점수 수학점수
+        세 개의 점수를 매개로하여 평균값을 계산하여 리턴하는 함수를 만들어 보시오.
+    </pre>
+    <script>
+        
+        // function getAver(kor,en,ma){
+        //     return (kor+en+ma)/3
+        // }
+        // let name = prompt("이름을 입력해주세요.");
+        // let kor = Number(prompt("국어점수를 입력해주세요."));
+        // let en = Number(prompt("영어점수를 입력해주세요."));
+        // let ma = Number(prompt("수학점수를 입력해 주세요."));
+        // let scoreAver = getAver(kor,en,ma);
+    
+        // document.write( `<h1>${name}님은 국어점수 ${kor}점, 영어점수 ${en}점, 수학점수 ${ma}점으로 평균점수는 ${scoreAver}점 입니다.</h1>`)
+
+        //풀이
+        // function getAver(score1,score2, score3){
+        //     return (score1+score2+ score3)/3
+        // }
+        // let aver = getAver(80,90,100)
+        // alert(aver)
+
+    </script>
+    <pre>
+        평균점수를 재료로 하여 등급을 리턴하는 함수를 만들어 보시오.
+        평균점수가 90점 이상이면 A
+                  80점 이상이면 B
+                  70점 이상이면 C
+                  70점 미만이면 D등급을 리턴하는 함수를 만들어보시오.
+    </pre>
+    <script>
+        function getGrade(aver){
+            //1. return aver>=90?"A":aver>=80?"B":aver>=70?"C":aver<70:"D"
+            //2.  let grade;
+            // if(aver>=90){
+            //     grade = "A"
+            // }else if(aver>=80){
+            //     grade="B"
+            // }else if(aver>=70){
+            //     grade="C"
+            // }else if(aver<70){
+            //     grade="D"
+            // } grade라는 변수에다 조건문을 대입해야되므로, 변수grade에 해당하는 if조건문을 먼저 입력하고, grade가 return되는 것이므로 마지막에 retrun구문을 써준다. 
+            // return grade;
+
+            //3.
+            if(90<=aver)
+            return "A"
+            if(80<=aver)
+            return "B"
+            if(70<=aver)
+            return "C"
+            if(70>aver)
+            return "D"
+        }
+        let name = prompt("이름을 입력해주세요.");
+        let kor = Number(prompt("국어점수를 입력해주세요."));
+        let en = Number(prompt("영어점수를 입력해주세요."));
+        let ma = Number(prompt("수학점수를 입력해 주세요."));
+        let aver = (kor+en+ma)/3;
+        let grade = getGrade(aver);
+        // getGrade(getAver(80,90,100))   -> 중첩시킬 수 있음
+
+        document.write(`<h1>${name}님은
+            국어점수 ${kor}점, 영어점수 ${en}점, 수학점수 ${ma}점으로 
+            <span style=color:red;>평균점수는 ${aver}점, ${grade}등급</span> 입니다.</h1>`)
+            
+    </script>
+    
+</body>
+</html>

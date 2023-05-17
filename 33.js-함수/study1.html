@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수 - function</h1>
+    <p>자바스크립트에서 동작을 표현하는 데이터</p>
+    <p>function이라는 키워드를 통해 자바스크립트의 동작을 표현하는 함수를 만들 수 있다.</p>
+    <p>function 함수명(재료){동작할 소스코드}</p>
+    <ol>
+        <li>함수는 정의를 먼저 해야 함.</li>
+        <li>정의한 함수를 실행함</li>
+    </ol>
+    <script>
+        //함수의 정의부
+        // function a(
+        //     //()안에는 재료를 작성하는데, 필요에 따라 작성하면 됨. 단, ()은 재료가 들어가든 안들어가든 넣어주어야 함.
+
+        // ){
+        //     //a라는 함수가 실행될 때 동작하는 소스코드
+        //     document.write("<br>hi<br>")
+        // }
+        // //함수의 실행부
+        // a()
+        // //a() =>a라는 함수를 실행한다.
+    </script>
+    <h2>함수의 매개변수 설정</h2>
+    <p>함수는 매개변수(재료)를 입력받을 수 있는 형태로 만들 수 있다.</p>
+    <p>함수를 실행하는 실행부에서 함수명(인자) 형태로 함수를 실행할 수 있다.</p>
+
+    <script>
+        //b라는 함수에 name이란 재료가 {}에서 사용된다.
+        // name은 변수의 이름으로 let을 사용하지 않아도 name은 변수의 이름이라고 정의함.
+        function b(name){
+            alert(name)
+        }
+        // b("이동욱")
+        // //실행함과 동시에 실행값을 넣어준 것.
+        // b("미미")
+        //'인자'라고 부름
+
+    </script>
+    <h2>매개변수의 개수는 제한이 없다.</h2>
+    <script>
+        function c(num1,num2){
+            alert(num1+num2)
+        }
+        //alert 또한 함수의 일종. 이름이 alert일뿐.
+        
+        // c(1,2)
+        //매개변수의 순서에 맞게 실행값이 입력되어 alert창에서 계산된다.
+        //실행되는 도구 모두 함수
+        // let number = Math.round(32.1)
+        // let name = prompt("당신의 이름을 입력해주세요")
+        // let result = alert("test")
+        // alert(result) 
+        //그 실행된 자리에서 계산해서 값을 남겨주는 함수(function)가 있고, 
+        // 그냥 자리에 값을 남기지 않고 알려만 주는 함수가 있다 => alert,document.write
+        
+    </script>
+    <h2>함수 안에서 return</h2>
+    <p>함수 안에서 return 구문을 쓰게되면 return 구문 오른쪽의 결과를 함수가 사용됬던 그 자리에 남기고 함수는 그 즉시 종료된다.</p>
+    <p>리턴값은 함수 내부에서 함수 외부로 데이터를 전달할때 사용하는 값이다.</p>
+    <script>
+        // function sumNumber(n1,n2){
+        //     return n1+n2
+        //     // return을 만나서 함수가 종료됨 -> 밑에 alert는 해석되지 않음.
+        //     alert("test")
+        // }
+        // let result = sumNumber(3,4) + sumNumber(4,6)
+        // //
+        // alert(result)
+
+        function abc(){
+            return "abc"
+        }  //리턴값은 함수 내부에서 함수 외부로 데이터를 전달할때 사용하는 값이다.
+        // alert(abc()+"DEF")
+        // "abc"+"DEF"
+        // "abcDEF"
+
+        function getName(name){
+            document.write(name+"님 환영합니다.")
+            return name
+        }
+        let personName = getName(prompt("이름을 입력해주세요"))
+        alert(personName)
+
+        // "이동욱" 값이 name으로 들어가서 document.write의 name자리로 들어가 return을 만나 document.write의 name자리에 값이 남게 되는 것.
+        // "이동욱" 값이 name으로 들어가서 document.write의 name자리로 들어가 return을 만나 name이 사용된 함수 getName이 사용되는 것.
+
+
+    </script>
+    
+</body>
+</html>

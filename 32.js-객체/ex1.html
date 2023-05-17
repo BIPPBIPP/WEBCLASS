@@ -12,60 +12,96 @@
         <h2>무비차트</h2>
         <ol class="movieChart">
             <script>
+                // 배열 안에 배열로 넣는 것보다 배열 안에 객체로 표현하는 것이 더 간편(?)하다.
                 let movieChart = [
-                    [
-                        1,
-                        "img1.jpg",
-                        "가디언즈 오브 갤럭시-Volume3",
-                        40.8
-                    ],
-                    [
-                        2,
-                        "img2.jpg",
-                        "분노의 질주-라이드 오어 다이",
-                        17.2
-                    ],
-                    [
-                        3,
-                        "img3.jpg",
-                        "슈퍼 마리오 브라더스",
-                        7.7
-
-                    ],
-                    [
-                        4,
-                        "img4.jpg",
-                        "더 퍼스트 슬램덩크",
-                        5.8
-                    ],
-                    [
-                        5,
-                        "img5.jpg",
-                        "메리 마이 데드 바디",
-                        5.7
-                    ],
-                    
+                    {
+                        lank:1,
+                        imgFileName: "img1.jpg",
+                        movieName:"가디언즈 오브 갤럭시-Volume3",
+                        reserRate:40.8
+                    },
+                    {
+                        lank:2,
+                        imgFileName: "img2.jpg",
+                        movieName:"분노의 질주-라이드 오어 다이",
+                        reserRate:17.2
+                    },
+                    {
+                        lank:3,
+                        imgFileName: "img3.jpg",
+                        movieName:"슈퍼 마리오 브라더스",
+                        reserRate:7.7
+                    },
+                    { 
+                        lank:4,
+                        imgFileName: "img4.jpg",
+                        movieName:"더 퍼스트 슬램덩크",
+                        reserRate:5.8
+                    },
+                    {
+                        lank:5,
+                        imgFileName: "img5.jpg",
+                        movieName:"메리 마이 데드 바디",
+                        reserRate:5.7
+                    }
                 ]
+
+
+                // let movieChart = [
+                //     [
+                //         1,
+                //         "img1.jpg",
+                //         "가디언즈 오브 갤럭시-Volume3",
+                //         40.8
+                //     ],
+                //     [
+                //         2,
+                //         "img2.jpg",
+                //         "분노의 질주-라이드 오어 다이",
+                //         17.2
+                //     ],
+                //     [
+                //         3,
+                //         "img3.jpg",
+                //         "슈퍼 마리오 브라더스",
+                //         7.7
+
+                //     ],
+                //     [
+                //         4,
+                //         "img4.jpg",
+                //         "더 퍼스트 슬램덩크",
+                //         5.8
+                //     ],
+                //     [
+                //         5,
+                //         "img5.jpg",
+                //         "메리 마이 데드 바디",
+                //         5.7
+                //     ],
+                    
+                // ]
                 
                 for(let i=0 ; i<movieChart.length; i++){
                     document.write(`
                 <li>
                 <figure>
-                    <img src="./img/${movieChart[i][1]}" alt="${movieChart[i][2]}">
-                    <span>${movieChart[i][0]}</span>
+                    <img src="./img/${movieChart[i].imgFileName}" alt="${movieChart[i].movieName}">
+                    <span>${movieChart[i].lank}</span>
                     <ul class="hiddenMenu">
                         <li><a href="#">상세보기</a></li>
                         <li><a href="#">예매하기</a></li>
                     </ul>
                 </figure>
-                <h3>${movieChart[i][2]} </h3>
-                <p>예매율 ${movieChart[i][3]}%</p>
+                <h3>${movieChart[i].movieName} </h3>
+                <p>예매율 ${movieChart[i].reserRate}%</p>
                 
             </li>
             `)
                 }
                 
             </script>
+
             <!-- <li>
                 <figure>
                     <img src="./img/img1.jpg" alt="가디언즈 오브 갤럭시-Volume3">
