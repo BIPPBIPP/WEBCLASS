@@ -5,4 +5,9 @@ js
 - number
 - boolean
 
-참조데이터 형태
+참조데이터(복합적) 형태
+- array
+- object
+- function
+
+
