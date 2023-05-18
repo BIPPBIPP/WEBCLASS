@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <h1>변수</h1>
+    <p>변수는 크게 지역변수와 전역변수로 나뉜다.</p>
+    <p></p>
+    <h2>지역변수</h2>
+    <p>지역변수는 특정 지역에서 생성된 변수이며 특정지역 안에서만 접근이 가능하다</p>
+    <p></p>
+    <h2>전역변수</h2>
+    <p>전역변수는 전체지역에서 생성된 변수이며 모든 지역에서 접근이 가능하다</p>
+    <p>tip) 변수는 안에서 밖으로는 접근이 가능하지만 밖에서 안으로는 접근이 불가능하다.</p>
+    <script>
+        let a = 100; //전역변수
+        // let person = {name:a,age:41}
+        // name은 단순히 name만 부르면 불려지지 않음. person을 타고 들어가야지만 name을 부를 수 있음.
+        // document.write(person.name);
+        
+        function showName(uname){
+            //uname은 showName함수 안에서만 사용가능한 지역변수
+            let a = 200
+            // a에 100이 저장되고, result에 a가 저장되어 나타남.
+            document.write(a) //->result는 지역변수
+        }
+        // function 밖에 있는 let a와 function 안에 있는 let a의 이름은 중복이 되어도 상관 X
+        //  function 지역 안에 있는 변수가 참고할 때, 안에서 밖으로는 참고가 가능하지만, 밖에서 안으로는 참고 불가능하다.
+        // 
+
+        showName();
+
+    </script>
+    
+</body>
+</html>

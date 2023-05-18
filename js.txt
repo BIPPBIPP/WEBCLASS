@@ -1,13 +1,47 @@
 js
 
+데이터형태 (datatype/자료구조)
+
 원시데이터 형태 
-- string
-- number
-- boolean
+- string "" '' ``
+- number   123456789
+- boolean  ture / false
 
 참조데이터(복합적) 형태
-- array
-- object
-- function
+- array  []
+- object  {key:value,key2:value2}
+- function  function(){}
+
+
+문법구문
+- 조건문
+if(){}
+if(){}else {}
+if(){}else if(){} else {}
+
+- 반복문
+반복변수/변수증감식/반복조건
+while(){}
+for(let a = 0; a<10, a++){}
+
+연산방법(계산방법)
++
+-
+*
+/
+%(나머지)
+
+a++ (a에 1씩 더하기)
+a+=1 (a에 1를 더하고 다시 a에 저장)
+a<b / a<=b / a!=b(a는 b와 같지 않다)
+a?b:c(삼항연산)
+
+
+
+
+
+
+
+
 
 

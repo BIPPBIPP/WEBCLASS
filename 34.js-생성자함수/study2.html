@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수2</title>
+    <script src="./js/person.js"></script>
+</head>
+<body>
+    <script>
+        //어떤 값을 사용할 것인지 먼저 정해놓고 함수 만들기
+        let person1 = new Person("김상범",35);
+        // // => {
+        //     name:"김상범",
+        //     age:36,
+        //     sayHello:function(){
+        //         document.write("안녕하세요")
+        //     }
+        person1.sayHello();
+        person1.intro();
+
+        let person2 = new Person("이동욱",41)
+        person2.sayHello();
+        person2.intro();
+
+        let person3 = new Person("김소연",43)
+        person3.sayHello();
+        person3.intro();
+    </script>
+</body>
+</html>

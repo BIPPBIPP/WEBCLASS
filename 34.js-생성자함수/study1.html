@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수</title>
+    <script src="./js/person.js"></script>
+    <!-- '해당하는 js를 설치(연결)한다' 라고 함.-->
+</head>
+<body>
+    <h1>생성자함수</h1>
+    <p>생성자함수란 객체를 생성하는 함수이다.</p>
+    <p>생성자 함수의 정의부 실행코드 안에서  this라는 표현을 통해 생성자 함수로 인해 만들어지게 될 객체를 표현할 수 있다. </p>
+    <p>생성자 함수의 실행부 앞에 new라는 키워드를 통해서 생성자 함수로 인해 만들어지게 될 객체를 표현할 수 있다.</p>
+    <p></p>
+    <script>
+        let person1 = new Person("김상범",35)
+        person1.sayHello();
+        person1.intro();
+        // let person1 = {
+        //     name:"김상범",
+        //     age:36,
+        //     sayHello:function(){
+        //         document.write("안녕하세요")
+        //     }
+        // }
+        // person1.sayHello();
+        // document.write("<p>"+person1.name+"님은 "+person1.age+"세 입니다."+"</p>");
+
+        let person2 = new Person("이동욱",41)
+        person2.sayHello();
+        person2.intro();
+        // let person2 = {
+        //     name:"이동욱",
+        //     age:41,
+        //     sayHello:function(){
+        //         document.write("안녕하세요.")
+        //     }
+        // }
+        // person2.sayHello();
+        // document.write("<p>"+person2.name+"님은 "+person2.age+"세 입니다."+"</p>");
+
+        let person3 = new Person("안지연",26)
+        person3.sayHello();
+        person3.intro();
+        // let person3 = {
+        //     name:"김소연",
+        //     age:43,
+        //     sayHello:function(){
+        //         document.write("안녕하세요.")
+        //     }
+        // }
+        // person3.sayHello();
+        // document.write("<p>"+person3.name+"님은 "+person3.age+"세 입니다."+"</p>");
+    </script>
+    
+</body>
+</html>
