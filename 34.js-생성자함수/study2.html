@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생성자함수2</title>
     <script src="./js/person.js"></script>
+    <script src="./js/dog.js"></script>
 </head>
 <body>
     <script>
@@ -27,6 +28,34 @@
         let person3 = new Person("김소연",43)
         person3.sayHello();
         person3.intro();
+    </script>
+    <h2>우리집 강아지</h2>
+    <script>
+        let dog1 = new Dog("뽀삐",2);
+        let dog2 = new Dog("흰둥이",4);
+        let dog3 = new Dog("파도",1);
+        let dog4 = new Dog("꿍이",7)
+
+        dog1.say();
+        dog2.say();
+        dog3.say();
+        dog4.say();
+       
+        // let dog1 = {
+        //     name:"뽀삐",
+        //     age:2,
+        //     say:function(){
+        //         document.write("멍멍!")
+        //     }
+        // }
+        // let dog2 = {
+        //     name:"흰둥이",
+        //     age:4,
+        //     say:function(){
+        //         document.write("멍멍!")
+        //     }
+        // }
+
     </script>
 </body>
 </html>
