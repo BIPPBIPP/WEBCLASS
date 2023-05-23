@@ -11,8 +11,11 @@ html{
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.cw{width: 1000px; margin: 0 auto;}
-
+.cw{
+    /* border: 1px solid red; */
+    width: 1200px; 
+    margin: 0 auto;
+}
 
 /* 3. layout - 크기, 배치 */
 
@@ -23,6 +26,8 @@ html{
 }
 .bottom {
     background: #2a367e;
+    width: 100%;
+    height: 360px;
 }
 
 /* 4. detail (글씨크기, 글씨색, 배경색, 마진, 패딩 등) */
@@ -33,29 +38,36 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
+.logo{
+    width: 200px;
+    height: 30px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .lnb{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .lnb>li{
+    /* border: 1px solid red; */
     padding-right: 15px;
     background: url("../img/bg_sideMenu.gif") no-repeat calc(100% - 5px) 50%;
-    color: gray;
+    color: #939393;
     font-size: 0.9rem;
     text-transform: uppercase;
-
 }
 .lnb>li:last-of-type{padding-right: 0; background: none;}
 
 .gnb{
     display: flex;
-    /* margin-bottom: 10px; */
-
+    margin-top: 20px;
 }
 .gnb>li{
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     color: #111;
@@ -72,9 +84,12 @@ header{
 .mainBanner>h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 6rem;
-    color: #2a367e;
-   padding-bottom: 40px;
+    background: linear-gradient(to right, #b8c6fd,#000075);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 40px;
 }
+/* MainBanner TabMenu */
 .mainBanner>dl{
     width: 400px;
     height: 120px;
@@ -94,12 +109,12 @@ header{
 }
 /* float를 하면 clear를 꼭 해줘야 함. so,
 => .bannerTab>dt::after{content: ""; display: block; clear: both;}설정 .but,지금은 전제 사이즈의 height를 설정했기때문에 상관 x.*/
+
 .mainBanner>dl>dt.on{
     font-weight: bold;
     color: #2a367e;
     border-bottom: 2px solid #2a367e;
 }
-
 .mainBanner>dl>dd{
     position: absolute;
     left: 0;
@@ -115,8 +130,13 @@ header{
     margin-bottom: 2px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .mainBanner dd li:last-of-type{margin-bottom: 0;}
+.mainBanner dd li span{
+    color: #969696;
+    font-weight: bold;
+}
 
 /* contents */
 .contents{
@@ -142,6 +162,13 @@ header{
     line-height: 163%;
 }
 
+/* bottom tabMeanu */
+.tabMenu{
+    /* border: 1px solid red; */
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
 .tabMenu>dl{
     width: 190px;
     height: 110px;
