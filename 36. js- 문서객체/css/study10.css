@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+/* img{
+    max-width: 100%;
+    선택한 태그의 너비의 최대값을 지정-
+} */
+
+/* layout */
+
+.swiper{
+    border: 1px solid red;
+    width: 600px;
+    height: 300px;
+    margin:0 auto;
+}

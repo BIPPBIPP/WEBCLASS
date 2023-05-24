@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+img{
+    max-width: 100%;
+    /* 선택한 태그의 너비의 최대값을 지정- */
+}
+
+.station{
+    border: 1px solid red;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.train{
+    border: 1px solid blue;
+    width: calc(100%*4);
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.train>li{
+    flex: 1;
+    position: relative;
+}
+.train img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.train li::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg,#00000060, transparent);
+}
+
+.txtBox{
+    width: 1200px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    z-index: 10;
+    padding-right: 500px;
+}
+.txtBox>p{
+    font-size: 1rem;
+}

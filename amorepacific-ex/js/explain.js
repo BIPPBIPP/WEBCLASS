@@ -11,8 +11,8 @@ window.onload = function(){
     let dtList2 = document.querySelectorAll(".tabMenu>dt")
     for(let k =0; k<dtList2.length; k++){
         dtList2[k].addEventListener("click",function(){
-            for(let j =0; j<dtList2.length;j++){
-                dtList2[j].classList.remove("on")
+            for(let k =0; k<dtList2.length;k++){
+                dtList2[k].classList.remove("on")
             }
             this.classList.add("on")
         })

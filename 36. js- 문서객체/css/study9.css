@@ -12,7 +12,7 @@ img{
     height: 600px;
     margin:0 auto;
     overflow: hidden;
-    /* position: fixed; */
+    position: relative;
 }
 .train{
     /* width: calc(500px*4); = 2000px */
@@ -20,7 +20,7 @@ img{
     /* 기차칸이 4개가 필요하기 때문 ->station이 4개 필요 */
     height: 100%;
     display: flex;
-    transition: all 0.5s ease 0s;
+    transition: all 1s ease 0s;
 }
 .train>li{
     /* border: 1px solid blue; */
@@ -64,7 +64,7 @@ img{
     z-index: 10;
     padding-right: 600px;
     box-sizing: border-box;
-    transition: all 0.6s ease 0.7s;
+    transition: all 0.5s ease 1s;
     opacity: 0;
 }
 .train>li.on .slideTxt{
@@ -73,4 +73,25 @@ img{
 }
 .slideTxt>p{
     font-size: 0.4em;
+}
+
+.pagination{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.pagination>li{
+    border: 1px solid aqua;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination>li:last-of-type{margin-right: 0;}
+.pagination>li.on{
+    background: aqua;
 }
