@@ -20,6 +20,17 @@ html{
     background: url(../img/icn_header_new_win.svg) no-repeat 50% 50%;
 }
 
+@media (max-width:768px){
+    .frame{
+    
+    }
+}
+@media (min-width:769px){
+    .frame{
+        
+    }
+}
+
 
 /* 3. layout */
 
