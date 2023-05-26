@@ -33,7 +33,6 @@ window.onload = function(){
             //element -> 
             type: 'bullets',
             clickable: true,
-            type:'bullets',
           },
         navigation: {
         nextEl: '.csNextBtn',

@@ -5,31 +5,45 @@
 .pc{display: none;}
 
 header.mo{
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100%;    
+    /* 현재 약 500px */
     height: 42px;
     z-index: 1000;
 }
 .innerHeader{
-    width: 88%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px 0;
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 /* header */
 .btnMoMenu{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 28px;
     height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
 }
+.btnMoMenu>span{
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background: #fff;
+    display: block;
+    margin-bottom: 4.5px;
+}
+.btnMoMenu>span:last-of-type{margin-bottom: 0;}
 .btnMenuLang{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 25px;
     height: 25px;
 }
@@ -47,6 +61,105 @@ header.mo{
     object-fit: contain;
 }
 
+/* mobile Menu */
+.moMenu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+    pointer-events: none;
+}
+.blackcover{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease 0s;
+    pointer-events: none;
+}
+.moMenu.show .blackcover{
+    opacity: 0.8;
+    pointer-events: auto;
+}
+.moGnb{
+    /* max-width: 300px;
+    min-width: 290px;
+    width: 75%; */
+    width: 374px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease 0.1s;
+}
+.moMenu.show .moGnb{
+    transform: translateX(0%);
+}
+.logoMo{
+    width: 150px;
+    max-width: 230px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    /* border: 1px solid red; */
+}
+.logoMo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.mobileMenuList{
+    /* border: 1px solid red; */
+    width: 325px;
+    height: calc(100% - 100px);
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.mobileMenuList>li{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+.mobileMenuList>li>a{
+    border-bottom: 2px solid #efefef;
+    display: block;
+    padding: 12px 12px;
+}
+.mobileMenuList>li::after{
+    content: '';
+    position: absolute;
+    right: 18px;
+    top:15px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+.mobileMenuList>li>ul{
+    /* border: 1px solid violet; */
+    margin-top: 20px;
+   
+}
+.mobileMenuList>li>ul>li{
+    color: #969696;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 12px;
+}
+.mobileMenuList>li>ul>li:last-of-type{margin-bottom: 0;}
+
 
 /* main */
 
@@ -54,7 +167,8 @@ header.mo{
 main{position: relative;}
 
 .videoBanner{
-    height: 780px;
+    /* height: 570px; */
+    height: 60vh;
     position: relative;
 }
 .videoBanner video{
@@ -70,8 +184,9 @@ main{position: relative;}
     left: 0;top: 0;
     background: rgba(0, 0, 0, 0.2);
 }
-
 .flotingTxt{
+    /* border: 1px solid aqua; */
+    width: 74vw;
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
@@ -79,11 +194,18 @@ main{position: relative;}
     text-align: center;
 
 }
-.flotingTxt>h2{margin-bottom: 60px;}
+.flotingTxt>h2{
+    width: 100%;
+    margin-bottom: 60px;
+}
+.flotingTxt>h2>img{
+    width: 100%;
+    object-fit: contain;
+}
 .flotingTxt>a{
     color: #fff;
-    font-size: 1.4rem;
-    padding: 30px 110px;
+    font-size: 1.2rem;
+    padding: 3vw 13vw;
     background: rgba(255,255,255,0.5);
     display: inline-block;
     border-radius: 3px;
@@ -94,44 +216,52 @@ main{position: relative;}
 .flotingTxt>a:hover{
     color: #000;
 }
+
+
 /* News */
 .news{
     /* border: 1px solid violet; */
-    width: 1440px;
+    width: 90%;
     margin: 0 auto;
     margin-top: 60px;
     margin-bottom: 100px;
 }
+
 .news>h3{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 26px;
 }
-.news>ul{display: flex;}
-.news>ul>li{
-    border-right: 1px solid #ebebeb;
-    flex: 1;
-    padding: 0 30px;
+.news ul{
+    display: flex;
 }
-.news>ul>li:first-of-type{padding-left: 0;}
-.news>ul>li:last-of-type{padding-right: 0; border: none;}
+.news ul>li{
 
-.news>ul>li>a>h4{
+}
+
+.news ul>li>a>h4{
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.news>ul>li>a .date{
+.news ul>li>a .date{
     font-size: 12px;
     color: #939393;
     margin-bottom: 28px;
 }
 
-.news>ul>li>a p{
+.news ul>li>a p{
     font-size: 1rem;
-
 }
+
+.news .swiper-pagination{
+    /* border: 1px solid red; */
+    position: relative;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
 
 /* culture */
 .culture{
