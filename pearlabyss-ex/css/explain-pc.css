@@ -280,13 +280,18 @@ main{position: relative;}
     width: 1440px;
     margin: 0 auto;
 }
-.notice>ul{
+.notice ul{
     display: flex;
     justify-content: space-between;
 }
-.notice>ul>li{
-    width: calc((100% - 60px)/4);
+.notice ul li{
+    /* border: 1px solid lime; */
+    /* width: calc((100% - 60px)/4); */
+    flex: 1;
+    margin-right: 20px;
 }
+.notice ul li:last-of-type{margin-right: 0;}
+
 .notice li figure{
     height: 190px;
     overflow: hidden;
