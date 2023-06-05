@@ -317,7 +317,7 @@ main{position: relative;}
 /* notice */
 
 .notice{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 90%;
     margin: 0 auto;
     padding: 0 20px 20px 20px;
@@ -349,9 +349,16 @@ main{position: relative;}
 }
 
 .notice .swiper-pagination{
+    /* border: 1px solid blue; */
     position: relative;
     margin: 0 auto;
 }
+
+/* pagination */
+span.swiper-pagination-bullet-active {
+    background: black;
+}
+/* pagination의 색깔은 개발자 툴에서 */
 
 /* footer */
 

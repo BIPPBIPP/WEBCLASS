@@ -1,7 +1,4 @@
-window.onload = function(){
-    let tabTitles = document.querySelectorAll(".tabTit>li")
-    let tabDes = document.querySelector(".tabDes")
-    let tabDescription = [
+let tabDescription = [
         // 배열 안에 문자데이터 원소가 나열되어 있음
         `<h3>title1</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum odit a vel, sed at culpa in tenetur porro maiores accusantium numquam vitae vero doloribus sint itaque voluptatem, consectetur et magni?</p>`,
@@ -15,23 +12,19 @@ window.onload = function(){
             <li>des4</li>
         </ul>`
     ]
+    // ready 안에 넣어도 되고 안넣어도 됨. -> 어떤 태그를 선택한 함수가 아니기 때문
+$(document).ready(function(){
 
-    for(let i = 0; i<tabTitles.length; i++){
-        tabTitles[i].addEventListener("click",function(){
-            for(j=0; j<tabTitles.length; j++){
-                tabTitles[j].classList.remove("on")
-            }
-           this.classList.add("on")
+    $(".tabTit>li").click(function(){
 
-           tabDes.innerHTML = tabDescription[i]
-           //innerHTML은 tabDes HTML안에 tabDescription를 넣어줌
-           //요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정
-
-        })
-    }
-
+        $(".tabTit>li").removeClass("on")
+        $(this).addClass("on")
+        let idx = $(this).index()   
+        //index()함수는 앞에 선택된 태그의 부모태그(.tabTit>li) 기준 순번을 리턴함 -> 위에서 클릭했던 tabTit>li의 순번을 체크하게 되는 것
+        $(".tabDes").html(tabDescription[idx])
+        //html()함수 안에 tabDescription변수의 순번이 들어가야하기 때문에 []안에는 idx변수를 넣어준다.
+        
+    })
 
 
-
-
-}
+})

@@ -31,5 +31,10 @@ $(document).ready(function(){
 
     $(".listNum>li").eq(2).css("color","red")
 
+
+    let num = Number(prompt("몇 번째 리스트를 활성화 시키실래요?"))
+    $(".listNum>li").eq(num).css("color","red")
+
+
 })
 

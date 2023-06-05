@@ -3,7 +3,7 @@ window.onload = function(){
     let newsSlider = new Swiper('.newStation',{
         slidesPerView : 3,
         pagination : {
-            el: '.swiper-pagination',
+            el: '.news_pagination',
             clickable: true,
         },
         breakpoints:{
@@ -17,10 +17,10 @@ window.onload = function(){
 
 
     })
-    let newsSlider2 = new Swiper('.newStation2',{
+    let noticeSlider = new Swiper('.notice_station',{
         slidesPerView : 4,
         pagination : {
-            el: '.swiper-pagination',
+            el: '.notice_pagination',
             clickable: true,
         },
         breakpoints:{
@@ -29,6 +29,7 @@ window.onload = function(){
             },
             768:{
                 slidesPerView:4,
+                spaceBetween:20,
             },
         }
 
