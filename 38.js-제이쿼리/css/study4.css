@@ -1,0 +1,12 @@
+*{margin: 0;padding: 0;}
+/* h1,h2,h3,h4,h5,h6{text-decoration: none; font-size: inherit; font-weight: inherit;} */
+
+
+.contents>div{
+    height: 1000px;
+    border: 1px solid black;
+}
+body.dark{
+    background: #000;
+    color: #fff;
+}

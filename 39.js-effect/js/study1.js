@@ -68,5 +68,8 @@ if($(this).hasClass("on")==true){
 
 
 })
-
+$(".gnb ul").click(function(){
+    return false
+})
+// 2뎁스를 클릭했을 때 1뎁스가 닫히지 않게 된다.
 })

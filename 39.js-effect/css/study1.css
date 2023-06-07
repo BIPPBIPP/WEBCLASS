@@ -44,7 +44,7 @@ nav.on{
     background: lightcyan;
 }
 .gnb>li{
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     height: 50px;
     overflow: hidden;
     transition: all 0.5s ease 0s;
@@ -55,6 +55,39 @@ nav.on{
     height: 50px;
     box-sizing: border-box;
     align-items: center;
+    /* border: 1px solid lightyellow; */
+    display: flex;
+    justify-content: space-between;
+}
+.depi{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.depi::before{
+    content: '';
+    background: #333;
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    /*position absolute를 설정하면 암묵적으로 inline-block형태로 지정됨 */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.depi::after{
+    content: '';
+    background: #333;
+    width: 2px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.gnb>li.on .depi::after{
+    display: none;
 }
 .gnb ul>li{
     /* border: 1px solid lime; */
