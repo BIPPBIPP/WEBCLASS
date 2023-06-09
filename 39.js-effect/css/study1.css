@@ -37,6 +37,7 @@ nav{
 nav.on{
     transform: translateX(0);
 }
+
 .gnb{
     /* border: 1px solid blue; */
 }
@@ -51,7 +52,6 @@ nav.on{
 }
 .gnb>li>a{
     border-bottom: 2px solid black;
-    display: flex;
     height: 50px;
     box-sizing: border-box;
     align-items: center;

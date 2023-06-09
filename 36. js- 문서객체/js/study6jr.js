@@ -1,6 +1,7 @@
 $(document).ready(function(){
     let menuState = false
     // 변수는 실행되어야 하는 함수 밖에 설정해 준다.
+    
 $(".btnMenu").click(function(){
 //btnMenu클래스를 클릭했을 때 실행될 동작
     if(menuState==false){

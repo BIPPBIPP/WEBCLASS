@@ -8,13 +8,13 @@ ul,ol{list-style: none;}
 /* layout */
 
 .swiper{
-    border: 1px solid red;
+    border: 10px solid red;
     /* width: 1200px; */
     height: 600px;
     margin:0 auto;
 }
 .station1>.train>li{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     position: relative;
 }
 .swiper li img{
