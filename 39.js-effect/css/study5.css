@@ -5,22 +5,23 @@ img{max-width: 100%;}
 
 .station{
     border: 1px solid red;
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    /* 100%는 화면 너비만큼이라는 뜻 -> 화면 너비가 바뀔 때 마다 새로운 사이즈로 표기됨 */
+    height: 500px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 .train{
     display: flex;
-    width: 500%;
+    width: calc(500%/1);
     height: 100%;
     transition: all 0.5s ease 0s;
 }
 .train>li{
     /* border: 1px solid lime; */
     width: 20%;
-    /* 기차 한칸의 크기는 .train이 현재 500%(li 5개만큼의 크기)의 크기로 500%=100% 인 상태 -> 1개의 크기는 100%/5=20%  */
+    /* 기차 한칸의 크기는 .train이 현재 너비가 500%(li 5개만큼의 크기)의 크기로 500%=100% 인 상태 -> 1개의 크기는 100%/5=20%  */
     height: 100%;
     position: relative;
 }

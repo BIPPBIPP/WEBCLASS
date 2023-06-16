@@ -1,0 +1,92 @@
+*{margin: 0;padding: 0;}
+ul,ol{
+    list-style: none;
+}
+
+
+.intro{
+    /* width: 100%; */
+    height: 100vh;
+    overflow: hidden;
+}
+.intro::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* 너비와 높이를 명확히 지정하면 박스형태가 됨*/
+    background: #3f3f3f;
+    opacity: 0.2;
+}
+
+
+.mainVideo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floatingTxt{
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 1;
+    padding: 20px;
+}
+.floatingTxt p{
+    border-top: 1px solid #fff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+@keyframes introAni{
+    0%{
+        opacity: 0;
+        transform: translateX(-10px)translateY(-10px)rotateX(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px)translateY(0px)rotate(0deg);
+    }
+}
+.floatingTxt h1{
+    animation: introAni 1s ease 0s;
+    font-size: 8rem;
+    line-height: 100%;
+    perspective: 300px;
+    /* perspective은 입체 공간을 확보해 줌 */
+}
+
+.floatingTxt h1 b{
+    opacity: 0;
+    font-size:8rem;
+    line-height: 8rem;
+    display: inline-block;
+}
+/* forwards :  animation이 적용되기 전에 스타일이 남아있음 */
+/* transform은 block형태일 때 적용이 가능함. -> 그러니 inline형태라면 inline-block으로 바꿔준 후, 적용 */
+.floatingTxt h1 b:nth-of-type(1){animation: introAni 1s ease 0s forwards;}
+.floatingTxt h1 b:nth-of-type(2){animation: introAni 1s ease 0.25s forwards;}
+.floatingTxt h1 b:nth-of-type(3){animation: introAni 1s ease 0.5s forwards;}
+.floatingTxt h1 b:nth-of-type(4){animation: introAni 1s ease 0.75s forwards;}
+.floatingTxt h1 b:nth-of-type(5){animation: introAni 1s ease 1s forwards;}
+.floatingTxt h1 b:nth-of-type(6){animation: introAni 1s ease 1.25s forwards;}
+.floatingTxt h1 b:nth-of-type(7){animation: introAni 1s ease 1.5s forwards;}
+.floatingTxt h1 b:nth-of-type(8){animation: introAni 1s ease 1.75s forwards;}
+.floatingTxt h1 b:nth-of-type(9){animation: introAni 1s ease 2s forwards;}
+.floatingTxt h1 b:nth-of-type(10){animation: introAni 1s ease 2.25s forwards;}
+.floatingTxt h1 b:nth-of-type(11){animation: introAni 1s ease 2.5s forwards;}
+.floatingTxt h1 b:nth-of-type(12){animation: introAni 1s ease 2.75s forwards;}
+.floatingTxt h1 b:nth-of-type(13){animation: introAni 1s ease 3s forwards;}
+.floatingTxt h1 b:nth-of-type(14){animation: introAni 1s ease 3.25s forwards;}
+
+
+

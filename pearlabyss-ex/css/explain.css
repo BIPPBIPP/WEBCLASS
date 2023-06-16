@@ -12,11 +12,12 @@ html{
     font-family: 'Noto Sans KR', sans-serif;
 }
 .blankStyle:after{
+    /* border: 1px solid red; */
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     display: inline-block;
-    margin-left: 4px;
+    margin-left: 6px;
     background: url(../img/icn_header_new_win.svg) no-repeat 50% 50%;
 }
 

@@ -1,0 +1,54 @@
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: inherit;}
+ul,ol{list-style: none;}
+img{max-width: 100%;}
+
+.station{
+    border: 1px solid red;
+    width: 100%;
+    /* 100%는 화면 너비만큼이라는 뜻 -> 화면 너비가 바뀔 때 마다 새로운 사이즈로 표기됨 */
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.train{
+    width: 100%;
+    /* =500px */
+    height: 500%;
+    /* =1500px */
+    transition: all 0.5s ease 0s;
+}
+.train>li{
+    /* border: 1px solid lime; */
+    width: 100%;
+    height: 20%;
+    /* 기차 한칸의 크기는 .train이 현재 높이가 500%(li 5개만큼의 크기)의 크기로 500%=100% 인 상태 -> 1개의 크기는 100%/5=20%  */
+    position: relative;
+}
+
+.train>li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.controler{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    
+}
+.controler a{
+    padding: 10px 20px;
+    color: #fff;
+    background: #3333338e;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
