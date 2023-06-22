@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+    font-weight: normal;
+} */
+
+/* layout */
+
+header{
+    height: 80px;
+    position: relative;
+}
+/* header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 300px;
+    background-color: lightpink;
+    opacity: 0.85;
+} */
+header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 0px;
+    background-color: rgb(124, 71, 176);
+    opacity: 0.85;
+    transition: all 0.5s ease 0s;
+}
+header.on::after{
+    height: 230px;
+}
+header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 50%;
+    height: 0px;
+    background-color: rgb(230, 114, 195);
+    opacity: 0.65;
+    transition: all 0.5s ease 0s;
+}
+header.on::before{
+    height: 230px;
+    z-index: 2;
+}
+.ineerHeader{
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    align-self: center;
+}
+.gnb{
+    width: 800px;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.gnb>li{
+    flex: 1;
+}
+
+.gnb>li>a{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.gnb>li:hover{
+    background-color: lightcoral;
+    color: #fff;
+}
+
+/* 2dep */
+.gnb>li:hover .gnb2dep{
+    opacity: 1;
+    pointer-events: auto;
+    /* 2뎁스가 보이면 마우스 커서가 반응하게 설정 */
+}
+.gnb2dep{
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    display: flex;
+    font-weight: 400;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    pointer-events: none;
+    /* 2뎁스가 보이지 않으면 마우스 커서가 반응하지 않게 설정 */
+}
+.gnb2dep>section{
+    flex: 1;
+    padding: 30px;
+    color: #fff;
+}
+
+section:nth-of-type(1)>h2{
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(2){
+    display: flex;
+}
+section:nth-of-type(2)>ul{
+    margin-left: 20px;
+    border-left: 2px solid gold;
+    padding-left: 20px;
+}
+section:nth-of-type(2)>ul>li{
+    padding: 5px;
+}
+section:nth-of-type(2)>ul>li:hover{
+    color: orange;
+}
+
+.banner{
+    height: 60vh;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
