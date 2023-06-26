@@ -1,0 +1,56 @@
+*{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+
+
+.circle{
+    width: 400px;
+    border: 5px solid red;
+    transform: rotate(-90deg);
+    /* svg가 지금 원으로 생성되었기 때문에 border를 네모로 그렸어도 네모 안에 있는 원에 속성이 적용됨 */
+}
+.a{
+    transition: all 0.5s ease 0s;
+    fill: navy;
+    /* 배경색(면)을 채워주는 속성 */
+    fill-opacity: 0.3;
+    /* 불투명 */
+    stroke: blue;
+    /* 선 */
+    stroke-width: 2;
+    /* stroke-width는 선의 굵기 */
+    stroke-dasharray: 314;
+    /* dasharray = 점선의 길이 */
+    stroke-dashoffset: 314;
+    /* dash의 시작점부터 어느 지점까지 dash를 그리겠다는 지점을 설정 */
+}
+.a:hover{
+    fill: lightcyan;
+    fill-opacity: 1;
+    stroke: seagreen;
+    stroke-width: 10;
+    /* stroke-dasharray: 1; */
+    stroke-dashoffset: calc((1 - 0.8)*314);
+}
+
+.list{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.list>li{
+    flex: 1;
+}
+
+
+.cl{
+    fill:none;
+    stroke:#000;
+    stroke-miterlimit:10;
+    transition: all 0.5s ease 0s;
+    stroke-dasharray: 10000;
+}
+.cl:hover{
+    stroke: red;
+    stroke-width: 10;
+    stroke-dashoffset: 0;
+}

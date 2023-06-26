@@ -89,7 +89,7 @@ $(document).mousemove(function(event){
     $(".cursorSub").addClass("on")
 
     $(".curTxt").css("left",(x+20)+"px")
-    $(".curTxt").css("top",(y+20)+"px")
+    $(".curTxt").css("top",(y-10)+"px")
     $(".curTxt").addClass("on")
     
 })

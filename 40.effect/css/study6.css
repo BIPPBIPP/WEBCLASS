@@ -126,13 +126,12 @@ html{
 .curTxt{
     z-index: 100;
     position: fixed;
-    left: 0;
+    left:0;
     top: 0;
     width: 100px;
-    border:1px solid black;
     transition: all 0.5s ease 0s;
     display: none;
-    /* opacity: 0; */
+   text-transform: capitalize;
     pointer-events: none;
 }
 .curTxt.on{
