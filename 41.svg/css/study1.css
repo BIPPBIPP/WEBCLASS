@@ -2,6 +2,15 @@
 ul,ol{list-style: none;}
 
 
+.list{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.list>li{
+    flex: 1;
+}
+
 .circle{
     width: 400px;
     border: 5px solid red;
@@ -32,14 +41,6 @@ ul,ol{list-style: none;}
     stroke-dashoffset: calc((1 - 0.8)*314);
 }
 
-.list{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-}
-.list>li{
-    flex: 1;
-}
 
 
 .cl{
@@ -52,5 +53,5 @@ ul,ol{list-style: none;}
 .cl:hover{
     stroke: red;
     stroke-width: 10;
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0 !important;
 }

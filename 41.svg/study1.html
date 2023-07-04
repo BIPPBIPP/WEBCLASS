@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>svg</title>
     <link rel="stylesheet" href="./css/study1.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./js/study1.js"></script>
 </head>
 <body>
     <ul class="list">
-        <li>
-            <svg class="circle" viewBox="0 0 120 120">
+        <li class="circle">
+            <svg viewBox="0 0 120 120">
                 <!-- 좌표 개념임 : (0,0)과 (100,100)에 위치한 좌표에 의해 cavas가 만들어짐.
                 px이 아니라 비율(%).-->
                 <circle class="a" cx="60" cy="60" r="50" />
@@ -18,16 +20,16 @@
             </svg>
             <!-- svg태그는 기본적인 img태그라 생각하면 됨 -->
         </li>
-        <li>
-            <svg class="circle" viewBox="0 0 120 120">
+        <li class="circle">
+            <svg viewBox="0 0 120 120">
                 <!-- 좌표 개념임 : (0,0)과 (100,100)에 위치한 좌표에 의해 cavas가 만들어짐.
                 px이 아니라 비율(%).-->
                 <circle class="a" cx="60" cy="60" r="50" />
                 <!-- cx,cy는 centerX, centerY를 뜻함, r은 원의 반지름 -->
             </svg>
         </li>
-        <li>
-            <svg class="circle" viewBox="0 0 120 120">
+        <li class="circle">
+            <svg viewBox="0 0 120 120">
                 <!-- 좌표 개념임 : (0,0)과 (100,100)에 위치한 좌표에 의해 cavas가 만들어짐.
                 px이 아니라 비율(%).-->
                 <circle class="a" cx="60" cy="60" r="50" />
@@ -36,9 +38,11 @@
         </li>
     </ul>
     <div class="box">
-        <svg viewBox="0 0 1084.73 728.7">
-            <path class="cl" d="M25.61,188S164.91-85.88,318.31,28.38s48.52,391.3-45.4,361.56S-27.61,285.07,3.7,427.51,193.09,862.64,449.78,657.59s198.79-673,480.53-447.65,120.52,444.52-39.13,472.7"/>
-        </svg>
+        <a href="#">
+            <svg viewBox="0 0 1084.73 728.7">
+                <path class="cl" d="M25.61,188S164.91-85.88,318.31,28.38s48.52,391.3-45.4,361.56S-27.61,285.07,3.7,427.51,193.09,862.64,449.78,657.59s198.79-673,480.53-447.65,120.52,444.52-39.13,472.7"/>
+            </svg>
+        </a>
     </div>
     
 </body>

@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0;}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.intro figure{
+    width: 1600px;
+    height: 100vh;
+}8654
+svg{width: 100%; height: 100%; object-fit: contain;}
+
+#introtxt path{
+    fill: transparent;
+    stroke: black;
+    /* transition: all 1s ease 0s; */
+}
+
+#introtxt.on path{
+    fill: red;
+    stroke-dashoffset: 0!important;
+    /* !important는 중요한 것으로 !important가 되어있는 속성은 무조건 적용된다 */
+    
+}
